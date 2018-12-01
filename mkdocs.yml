@@ -3,7 +3,9 @@ nav:
 - Home: 'index.md'
 - Theory:
     - 'Theory': 'concepts.md'
-    - 'technology': 'technology.md'
 - Technology:
     - 'Technology': 'technology.md'
+    - 'GIT': 'git.md'
+- Andere:
+    - 'Netwerkbeheer': 'netwerkbeheer.md'
 theme: cinder
