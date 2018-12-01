@@ -1,8 +1,4 @@
-# Technology
-
-This page contains documentation about common used Technology.
-
-## MkDocs
+# MkDocs
 
 Generates static sites based on markdown files. <https://www.mkdocs.org>
 
