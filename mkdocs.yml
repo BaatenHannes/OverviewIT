@@ -6,6 +6,7 @@ nav:
 - Technology:
     - 'MkDocs': 'mkdocs.md'
     - 'GIT': 'git.md'
+    - 'CSS': 'css.md'
 - Andere:
     - 'Netwerkbeheer': 'netwerkbeheer.md'
 theme: cinder
