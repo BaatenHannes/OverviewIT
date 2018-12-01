@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="shortcut icon" href="../img/favicon.ico">
+
+    <title>GIT - Overview</title>
+
+    <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.018/css/hack.min.css">
+    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../css/base.css" rel="stylesheet">
+    <link href="../css/cinder.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/highlight.css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+    <script>
+    WebFont.load({
+        google: {
+            families: ['Open Sans', 'PT Sans']
+        }
+    });
+    </script>
+
+    
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            <a class="navbar-brand" href="..">Overview</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Theory <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../concepts/">Theory</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Technology <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../technology/">Technology</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="./">GIT</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Andere <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../netwerkbeheer/">Netwerkbeheer</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fa fa-search"></i> Search
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../technology/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../netwerkbeheer/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#git">GIT</a></li>
+            <li class="second-level"><a href="#overview">Overview</a></li>
+                
+            <li class="second-level"><a href="#initialize">Initialize</a></li>
+                
+            <li class="second-level"><a href="#saving-changes">Saving changes</a></li>
+                
+            <li class="second-level"><a href="#stashing-changes">Stashing changes</a></li>
+                
+            <li class="second-level"><a href="#syncing-with-remote-repository">Syncing with remote repository</a></li>
+                
+                <li class="third-level"><a href="#configuring-remote">Configuring remote</a></li>
+                <li class="third-level"><a href="#pushing">Pushing</a></li>
+                <li class="third-level"><a href="#merge-vs-rebase">Merge vs Rebase</a></li>
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="git">GIT</h1>
+<h2 id="overview">Overview</h2>
+<p>Git is a version-control system for tracking changes in computer files and coordinating work on those files among multiple people.</p>
+<p>Example: stage, commit and push changes to remote repository called origin.</p>
+<pre><code>git add *
+git commit -m &quot;bugfix&quot;
+git fetch origin
+git pull origin
+git push origin --all 
+</code></pre>
+
+<p>Example: push exisiting project to new remote repository (without readme)
+Step 1: Create local repository and commit changes</p>
+<pre><code>git init
+git add .
+git commit -m &quot;Initial commit&quot;
+</code></pre>
+
+<p>Step 2: add remote and push changes to remote</p>
+<pre><code>git remote add origin remote_origin_url
+git remote -v (verifies then new remote URL)
+git push origin master 
+</code></pre>
+
+<hr />
+<h2 id="initialize">Initialize</h2>
+<ul>
+<li>
+<p><code>git init</code> --- create new local repository</p>
+</li>
+<li>
+<p><code>git clone</code> --- create copy of an existing repository, automatically creates a remote connection called origin</p>
+</li>
+</ul>
+<hr />
+<h2 id="saving-changes">Saving changes</h2>
+<p>The commands: <code>git add</code>, <code>git status</code>, and <code>git commit</code> are all used in combination to save a snapshot of a Git project's current state.</p>
+<ul>
+<li>
+<p><code>git add</code> --- stages changes</p>
+</li>
+<li>
+<p><code>git status</code> --- checks which files are staged</p>
+</li>
+<li>
+<p><code>git reset</code> --- undo a git add</p>
+</li>
+<li>
+<p><code>git commit</code> --- commits the staged changes to the <strong>local</strong> repository</p>
+</li>
+</ul>
+<hr />
+<h2 id="stashing-changes">Stashing changes</h2>
+<p>Stashing takes your uncommitted changes <strong>(both staged and unstaged)</strong>, saves them away for later use, and then reverts them from your working copy. </p>
+<ul>
+<li>
+<p><code>git stash</code> --- temporarily shelves changes</p>
+</li>
+<li>
+<p><code>git stash pop</code> --- reaplly stashed changes to local working copy</p>
+</li>
+</ul>
+<p>Git stash does not stash untracked files (new files). To stash new files you can add -u (--include-untracked)</p>
+<ul>
+<li><code>git stash -u</code> --- stashes changes with untracked files</li>
+</ul>
+<hr />
+<h2 id="syncing-with-remote-repository">Syncing with remote repository</h2>
+<h3 id="configuring-remote">Configuring remote</h3>
+<p>A remote repository can be reached through a URL and credentials. Git remote allows you to creates an alias for easy use of the URL of the remote repository.</p>
+<ul>
+<li>
+<p><code>git remote</code> --- get current remote configurations</p>
+</li>
+<li>
+<p><code>git remote -v</code> --- same as the above but includes the URL of each remote</p>
+</li>
+<li>
+<p><code>git remote add &lt;name&gt; &lt;url&gt;</code> --- adds a new remote</p>
+</li>
+<li>
+<p><code>git remote rm &lt;name&gt;</code> --- remove remote</p>
+</li>
+</ul>
+<h3 id="pushing">Pushing</h3>
+<ul>
+<li><code>git push &lt;remote&gt; &lt;branch&gt;</code> </li>
+</ul>
+<h3 id="merge-vs-rebase">Merge vs Rebase</h3>
+<p>Both try to achieve the same result, but rebase rewrites the history by 'rebasing' one branch on top of the other, creating a lineair history. This prevents cluttering with merge commits, but can create confusing situations by creating a different history with other team members. <a href="https://www.atlassian.com/git/tutorials/merging-vs-rebasing">Link to explanation</a></p>
+<p><img alt="Merge" src="../img/merge.svg" /></p>
+<p><img alt="Rebase" src="../img/rebase.svg" /></p></div>
+        
+        
+    </div>
+
+    <footer class="col-md-12 text-center">
+        <hr>
+        <p>
+        <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p></small>
+    </footer>
+
+    <script src="../js/jquery-1.10.2.min.js"></script>
+    <script src="../js/bootstrap-3.0.3.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    var base_url = '..';
+    </script>
+    <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
+    <script src="../js/base.js"></script>
+    <script src="../search/main.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        From here you can search these documents. Enter your search terms below.
+                    </p>
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                        </div>
+                    </form>
+                    <div id="mkdocs-search-results"></div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </body>
+
+</html>

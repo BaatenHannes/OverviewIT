@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="shortcut icon" href="../img/favicon.ico">
+
+    <title>Netwerkbeheer - Overview</title>
+
+    <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.018/css/hack.min.css">
+    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../css/base.css" rel="stylesheet">
+    <link href="../css/cinder.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/highlight.css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+    <script>
+    WebFont.load({
+        google: {
+            families: ['Open Sans', 'PT Sans']
+        }
+    });
+    </script>
+
+    
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            <a class="navbar-brand" href="..">Overview</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Theory <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../concepts/">Theory</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Technology <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../technology/">Technology</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../git/">GIT</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Andere <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li class="active">
+    <a href="./">Netwerkbeheer</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fa fa-search"></i> Search
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../git/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li class="disabled">
+                        <a rel="prev" >
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#netwerkbeheer">Netwerkbeheer</a></li>
+            <li class="second-level"><a href="#dhcp">DHCP</a></li>
+                
+            <li class="second-level"><a href="#dns">DNS</a></li>
+                
+            <li class="second-level"><a href="#active-directory">Active Directory</a></li>
+                
+                <li class="third-level"><a href="#domain-controller">Domain Controller:</a></li>
+            <li class="second-level"><a href="#agdlp">AGDLP</a></li>
+                
+            <li class="second-level"><a href="#powershell">Powershell</a></li>
+                
+                <li class="third-level"><a href="#syntax">Syntax</a></li>
+                <li class="third-level"><a href="#useful-commands">Useful commands</a></li>
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="netwerkbeheer">Netwerkbeheer</h1>
+<h2 id="dhcp">DHCP</h2>
+<p>Client                  DHCP Server
+DHCP opties:
+Ip adres
+Subnetmask
+gateway
+dns
+dns suffix</p>
+<p>Switch toevoegen
+ip adres geven: netwerk config - 
+dhcp</p>
+<h2 id="dns">DNS</h2>
+<p>surf naar www.google.com -&gt; zoekt ip adres
+Twee lokale opzoekingen, daarna neemt uw dns server het over. (lokaal is dat dns server van bv. telenet)</p>
+<p>check etc/hosts
+daarna dns cache
+daarna vraagt hij aan dns server in domein</p>
+<p>client      -&gt;  DNS server (hik.be) → internet root server</p>
+<p>root server verwijst u naar .com dns server → google.com dns server → drive.google.com dns server</p>
+<h2 id="active-directory">Active Directory</h2>
+<p>Kan niet zonder DNS! Voor AD moest je op elke PC een gebruiker aanmaken om te kunnen authenticeren. Authenticatie gaat via Kerberos op de Domain Controller (waar AD staat).
+Kerberos stuurt tickets voor toegang -&gt; zie youtube video.</p>
+<p>Kleine bedrijven: kan via Azure AD, voor grote bedrijven niet voldoende (geen LDAP ondersteuning bvb.).</p>
+<p>Kan onder meerdere domeinen (subdomeinen dan eigenlijk). Maar geeft problemen voor authenticatie in cloud, dus meer en meer één groot domein.</p>
+<p>Functie Domein Controller(s):
+Host databank van AD
+Repliceren elkaar (niet zoals bij DNS waarbij één hoofd DNS (primary zone) en een backup 
+DNS (secondary zone)</p>
+<h3 id="domain-controller">Domain Controller:</h3>
+<p>geef ip adres: 10.10
+installeer rollen
+maak domeincontroller: cursusdom.be</p>
+<p>5 rollen: (FSMO) (kunnen bij één domeincontroller)
+RID Master: verdeeld groepen van security identifiers aan de andere domein controllers: zijn deze op moet je opnieuw bij de RID master nieuwe keys ophalen.
+PDC emulator: distributie van verandering naar andere domein controllers
+Schema Master: houdt bij hoe u database er uit ziet.
+Domein Naming Master:
+Infrastructure Master:</p>
+<p>Core</p>
+<p>Veel instellingen kunnen ook via sconfig</p>
+<ol>
+<li>naam wijzigen</li>
+</ol>
+<pre><code>get current computername: hostname
+wmic computersystem where caption='xp-pc' rename windows7-pc
+</code></pre>
+
+<ol>
+<li>
+<p>ip aanpassen</p>
+<ol>
+<li>get name of interface:
+netsh interface show interface
+change ip adress:
+netsh interface ip set address "Ethernet" static 10.0.0.100 255.255.0.0 10.0.0.1 1
+show change:
+netsh interface show interface</li>
+</ol>
+</li>
+<li>
+<p>windows update uitzetten
+BETER via powershell:
+stop-service wuauserv
+set-service wuauserv -StartupType Disabled
+firewall uitzetten
+netsh advfirewall set  allprofiles state off</p>
+</li>
+</ol>
+<p>Toevoegen aan domain (cursusdom.be)
+1. Eerst moet je DNS Server configureren, anders geraak je niet aan het domein
+    * netsh interface ipv4 add dnsserver "Ethernet" address=192.168.x.x index=1
+2. Met volgende command kan je de lokale pc toevoegen aan het domein. Hierbij moet je je authenticeren met een account van het domein.
+    * netdom join %THE_COMPUTER_NAME% /domain:OPSCODEDEMO.COM /userd:Administrator /passwordd:xxx
+Kan rechtstreeks (via GUI) via system - 
+Fileserver van maken
+Kan eenvoudiger via de Domein Controller - Server Manager - All Servers - Server toevoegen via zoekfunctie - Functies en rollen installeren.
+start powershell
+Install-WindowsFeature –Name FS-Resource-Manager
+Folder C:DATA sharen
+Beter via Server manager: fileserver - shares - tasks - new
+New-SMBShare –Name "Shared" –Path "C:\Shared" <code>–ContinuouslyAvailable</code> –FullAccess domain\admingroup `
+Test via nieuwe netwerklocatie aan te maken: \ServerCore\Data
+Kan ook gewoon via \ServerCore -&gt; laat alle shared mappen zien
+
+Mogelijke problemen:</p>
+<ul>
+<li>IP instellingen:</li>
+<li>fixed IP</li>
+<li>DNS Server</li>
+<li>Gateway instellingen</li>
+<li>Gekoppeld aan virtuele switch?</li>
+<li>Firewall? Pingen indien geen reply en bovenstaande is ok -&gt; Firewall staat op</li>
+<li>Check of DNS werkt. (ping domein ipv ip-adres of NSLookup)</li>
+</ul>
+<h2 id="agdlp">AGDLP</h2>
+<p>Account
+Global Group
+Domain Local Group
+Permission</p>
+<table>
+<thead>
+<tr>
+<th>Account</th>
+<th>Global Group</th>
+<th>Domain Local Group</th>
+<th>Permission (use NTFS)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jos.Smet</td>
+<td>GG_HR</td>
+<td>DL_HR_R(read)</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>centered</td>
+<td>DL_HR_W(write)</td>
+<td>HR (share map)</td>
+</tr>
+<tr>
+<td></td>
+<td>are neat</td>
+<td>DL_HR_FC(fullctr)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Bij folder sharen:</strong>
+Share altijd everyone full control en dan per gebruiker/group met NTFS
+Inheritance altijd uit</p>
+<p>Op examen niet rechtstreeks, maar altijd met <strong>groep structuur</strong> werken:</p>
+<ul>
+<li>OU: cursusdom</li>
+<li>OU: groepen/users/computers/servers</li>
+<li>groepen: Global Groups GG_HR, etc.</li>
+</ul>
+<p>Voordeel van computer toe te voegen op domein: 
+iedere gebruiker binnen domein kan aanmelden via die pc
+pc kan beheerd worden vanaf netwerk</p>
+<h2 id="powershell">Powershell</h2>
+<h3 id="syntax">Syntax</h3>
+<h4 id="psitem-or-_">$PSItem or $_</h4>
+<p>Gets the item in a foreach or after the pipeline.</p>
+<p>$<em> (dollar underscore) 'THIS' token. Typically refers to the item inside a foreach loop. Task: Print all items in a collection. Solution. ... | foreach { Write-Host $</em> }</p>
+<pre><code>get-process | where-object {$_.cpu -gt 1 -and $_.company -ne 'Microsoft Corporation'} | ft name, cpu, company
+</code></pre>
+
+<h4 id="comparators">Comparators</h4>
+<pre><code> -eq             Equal
+ -ne             Not equal
+ -ge             Greater than or equal
+ -gt             Greater than
+ -lt             Less than
+ -le             Less than or equal
+ -like           Wildcard comparison
+ -notlike        Wildcard comparison
+ -match          Regular expression comparison
+ -notmatch       Regular expression comparison
+ -replace        Replace operator
+ -contains       Containment operator
+ -notcontains    Containment operator
+ -in             Like –contains, but with the operands reversed.(PowerShell 3.0)
+ -notin          Like –notcontains, but with the operands reversed.(PowerShell 3.0)
+
+get-childitem | c:\windows | where-object LastAccessTime -gt (Get-Date).AddMonths(-1)
+</code></pre>
+
+<h3 id="useful-commands">Useful commands</h3>
+<h4 id="get-process">Get-process</h4>
+<pre><code>get-process --- toont alle processen
+get-process -name notepad --- toont running notepad processen
+get-process -name n* --- toont alle processen starting with N
+</code></pre>
+
+<h4 id="stop-process">Stop-process</h4>
+<pre><code>stop-process -name notepad --- stop all notepad processen
+stop-process -name notepad -whatif --- check which processes would have been stopped 
+</code></pre>
+
+<h4 id="get-date">Get-Date</h4>
+<p>Shows current date.</p>
+<pre><code>(Get-Date).DayOfWeek --- dag van de week
+(Get-Date).AddYears/AddDays/ --- add amount of time to dat
+Get-Date -Day 1 -Month 7 -Year (Get-Date).Year
+--- toont op welke dag 1 juli van het huidig jaar valt 
+</code></pre></div>
+        
+        
+    </div>
+
+    <footer class="col-md-12 text-center">
+        <hr>
+        <p>
+        <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p></small>
+    </footer>
+
+    <script src="../js/jquery-1.10.2.min.js"></script>
+    <script src="../js/bootstrap-3.0.3.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    var base_url = '..';
+    </script>
+    <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
+    <script src="../js/base.js"></script>
+    <script src="../search/main.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        From here you can search these documents. Enter your search terms below.
+                    </p>
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                        </div>
+                    </form>
+                    <div id="mkdocs-search-results"></div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </body>
+
+</html>

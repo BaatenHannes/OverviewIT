@@ -4,7 +4,7 @@ nav:
 - Theory:
     - 'Theory': 'concepts.md'
 - Technology:
-    - 'Technology': 'technology.md'
+    - 'MkDocs': 'mkdocs.md'
     - 'GIT': 'git.md'
 - Andere:
     - 'Netwerkbeheer': 'netwerkbeheer.md'
