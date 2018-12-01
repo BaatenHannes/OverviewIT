@@ -40,4 +40,10 @@ Git stash does not stash untracked files (new files). To stash new files you can
 
 ---
 
+## Syncing with remote repository
+
+A remote repository can be reached through a URL and credentials. Git remote creates an alias for easy use of the URL of the remote repository.
+
+`git remote` 
+
 
