@@ -170,6 +170,158 @@ public class Notification
 }
 ```
 
+## Inversion Of Control
+
+'Omdraaien van de controle'. The **division between the 'What' and the 'When'** parts of the code. 
+
+Code that does not know and care when it will run, it only knows what it will do and depend on abstractions. 
+
+In traditional programming, the flow of the business logic is determined by objects that are statically bound to one another. With inversion of control, the flow depends on the object graph that is built up during program execution. Such a dynamic flow is made possible by object interactions that are defined through abstractions. This run-time binding is achieved by mechanisms such as dependency injection or a service locator. 
+
+* Factory pattern
+* Service locator pattern
+* Dpeendency injection
+* Strategy pattern
+
+---
+## Patterns
+
+### Factory method pattern
+
+In class-based programming, the factory method pattern is a creational pattern that uses factory methods to deal with the problem of creating objects without having to specify the exact class of the object that will be created, **by calling a factory method rather than by calling a constructor**.
+
+>Puts the pieces together to make a complete object and *hides the concrete type* from the caller.
+
+>"Define an interface for creating an object, but let subclasses decide which class to instantiate. The Factory method lets a class defer instantiation it uses to subclasses." (Gang Of Four)
+
+Why and when to use:
+* A class cannot anticipate the type of objects it needs to create beforehand.
+* A class requires its subclasses to specify the objects it creates.
+* You want to localize the logic to instantiate a complex object.
+
+### Abstract factory pattern
+
+Variant on the factory method pattern, where instead of creating object in a factory method, you use a factory class to generate objects of a certain type. This is especially usefull when creating **complex objects** in multiple different classes. They can all share a factory class to generate objects, and if the composition of the object changes, only the factory class needs to be changed.
+
+* the **Factory Method pattern** uses inheritance and relies on a subclass to handle the desired object instantiation.
+* with the **Abstract Factory pattern**, a class delegates the responsibility of object instantiation to another object via composition.
+
+**Factory method**
+Creates object of a subclass of Foo. Which subclass depends on the subclass of A. Inheritence is used to decide the behaviour of f.whatever().
+```
+class A {
+    public void doSomething() {
+        Foo f = makeFoo();
+        f.whatever();   
+    }
+
+    protected Foo makeFoo() {
+        return new RegularFoo();
+    }
+}
+
+class B extends A {
+    protected Foo makeFoo() {
+        //subclass is overriding the factory method 
+        //to return something different
+        return new SpecialFoo();
+    }
+}
+```
+**Abstract Factory**
+Creates objects of a subclass of Foo. Which subclass depends on the specifiek factory that is injected. This way, the behaviour of f.whatever() depends on the type of factory you inject.
+```
+class A {
+    private IFactory factory;
+
+    public A(IFactory factory) {
+        this.factory = factory;
+    }
+
+    public void doSomething() {
+        //The concrete class of "f" depends on the concrete class
+        //of the factory passed into the constructor. If you provide a
+        //different factory, you get a different Foo object.
+        Foo f = factory.makeFoo();
+        f.whatever();
+    }
+}
+
+
+interface IFactory {
+    Foo makeFoo();
+    Bar makeBar();
+    Aycufcn makeAmbiguousYetCommonlyUsedFakeClassName();
+}
+
+//need to make concrete factories that implement the "Factory" interface here
+```
+
+### Strategy Pattern
+
+The strategy pattern is a behavioral software design pattern that enables selecting an algorithm at runtime. Instead of implementing a single algorithm directly, code receives run-time instructions as to which in a family of algorithms to use.
+
+Strategy can be assigned to an object by composition, rather then inheritance, implementing an IStrategy interface where you call for example Strategy.DoSomething(). The type of IStrategy will decide the behaviour of the method, and the object can be switched at runtime with another strategy object with another implementation.
+
+```
+   public static void Main(String[] args)
+    {
+        // Prepare strategies
+        IBillingStrategy normalStrategy    = new NormalStrategy();
+        IBillingStrategy happyHourStrategy = new HappyHourStrategy();
+
+        Customer firstCustomer = new Customer(normalStrategy);
+
+        // Normal billing
+        firstCustomer.Add(1.0, 1);
+
+        // Start Happy Hour
+        firstCustomer.Strategy = happyHourStrategy;
+        firstCustomer.Add(1.0, 2);
+
+        // New Customer
+        Customer secondCustomer = new Customer(happyHourStrategy);
+        secondCustomer.Add(0.8, 1);
+        // The Customer pays
+        firstCustomer.PrintBill();
+
+        // End Happy Hour
+        secondCustomer.Strategy = normalStrategy;
+        secondCustomer.Add(1.3, 2);
+        secondCustomer.Add(2.5, 1);
+        secondCustomer.PrintBill();
+    }
+}
+```
+[The entire code of above example can be found here](https://en.wikipedia.org/wiki/Strategy_pattern)
+
+
+### Singleton Pattern
+
+A singleton is a class which only allows one instance of itself to be created - and gives simple, easy access to said instance. This is achieved by:
+
+* making the constructor private to prevent outside instantiation
+* make a static property which contains one instance of itself
+
+```
+public class Singleton
+{
+    private Singleton()
+    {
+        // Prevent outside instantiation
+    }
+
+    private static readonly Singleton _singleton = new Singleton();
+
+    public static Singleton GetSingleton()
+    {
+        return _singleton;
+    }
+}
+```
+
+
+---
 
 ##.NET 
 
@@ -186,3 +338,5 @@ The .NET Framework consists of the **common language runtime (CLR)** and the **.
 Ontwikkelaars die CLR gebruiken schrijven hun code in een zogenaamd hogere programmeertaal zoals C#, Scala of VB.NET. Tijdens het compileren zorgt een .NET-compiler ervoor dat de broncode wordt omgezet naar MSIL, welke tijdens het uitvoeren door de just in time compiler van de CLR wordt gecompileerd naar code die uitgevoerd kan worden op het systeem waar de CLR op dat moment op draait. Dit zorgt ervoor dat applicaties niet hardware afhankelijk zijn, en dus op elk willekeurig systeem kunnen worden uitgevoerd, zolang er een CLR voor is. Door dit proces zijn applicaties wel (iets) trager, omdat ze tijdens het uitvoeren gecompileerd worden.
 
 ![CLR](/img/CLRDiagram.png)
+
+
