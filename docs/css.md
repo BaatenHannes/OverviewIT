@@ -15,6 +15,7 @@ float:left;
 * Parent with only floated elements will collapse, fix by 
     * creating empty div behind parent element with `clear: both`
     * or give parent element `overflow: auto`
+---
 
 ### Flex-box
 
@@ -35,6 +36,8 @@ float:left;
 
 [Nice link with gifs on flex-grow and flex-shrink](https://medium.freecodecamp.org/even-more-about-how-flexbox-works-explained-in-big-colorful-animated-gifs-a5a74812b053)
 
+---
+
 ### Centering
 
 #### Horizontal
@@ -51,3 +54,42 @@ float:left;
 
 * Parent element: `display: flex` and define width and height
 * Child element: `margin: auto` and define width and height
+
+---
+
+
+## Sizing elements
+
+
+### Box-sizing
+
+With border-box, borders will grow towards the inside of the element instead of the outside. This ensures the total width of the element stays the same.
+
+```css
+Box-sizing: border-box;
+```
+---
+
+### EM vs REM vs PX
+
+#### EM
+
+The em value is relative to the current font-size. If no font-size is declared in the element or parent element, the default font-size will be chosen which, *in most browsers and user settings* is **16px**.
+In this instance, a value of 2em will mean 32px. Em is preferred over px because it is relative to the settings the user and browser have declared as standard. Px will override them, giving the user less options.
+
+#### REM
+
+REM takes the above value, but instead of being based on the current font-size of the element, it is based on the root font-size.
+For example:
+
+```css
+h1 {
+  font-size: 2em; /* 1em = 16px */
+  margin-bottom: 1em; /* 1em = 32px */
+}
+```
+
+In the example above, the margin bottom will be 32px, because it is based on the font-size of the element h1, which is set to 2*16px.
+If margin-bottom is set to 1rem, it will be 16px because it is based on the root font-size.
+
+---

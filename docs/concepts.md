@@ -339,4 +339,69 @@ Ontwikkelaars die CLR gebruiken schrijven hun code in een zogenaamd hogere progr
 
 ![CLR](/img/CLRDiagram.png)
 
+---
 
+##REST 
+
+Excellent overview here - [https://restfulapi.net/statelessness/](https://restfulapi.net/statelessness/)
+
+**Representational State Transfer** is a software architecture used to create web services.
+RESTful web services allow the requesting systems to access and manipulate textual representations of web resources by using a uniform and predefined set of **stateless** operations.
+
+
+###Architectural properties
+
+* **performance** in component interactions, which can be the dominant factor in user-perceived performance and network efficiency;[9]
+* **scalability** allowing the support of large numbers of components and interactions among components.
+* **simplicity** of a uniform interface;
+* **modifiability** of components to meet changing needs (even while the application is running);
+* **visibility** of communication between components by service agents;
+* **portability** - usability of the same software in different environments
+* **reliability** in the resistance to failure at the system level in the presence of failures within components, connectors, or data.[9]
+
+
+###Constraints
+CCCLUS - following these constraints ensures a RESTfull Webservice with the properties mentioned above.
+
+####Client-server Architecture
+* Separation of user interface and date storage
+* Advantages:
+    * Portability: Multi platform
+    * Scalability: (only scale back-end for example)
+
+####Statelessness
+* No client context being stored on the server between requests
+* Session state is held in the client
+* Session state can be transferred by the server to another service such as a database to maintain a persistent state for a period and allow authentication
+* Advantages:
+    * Scalability: any server can handle any request
+    * 
+
+####Cacheability
+
+####Layered System
+
+####Code on demand
+
+####Uniform interface
+
+---
+
+##Stateless
+
+>Statelessness means that every HTTP request happens in complete isolation. When the client makes an HTTP request, it includes all information necessary for the server to fulfill that request. The server never relies on information from previous requests. If that information was important, the client would have sent it again in this request.
+
+###Application State vs Resource State
+Application state is server-side data which servers store to identify incoming client requests, their previous interaction details, and current context information.
+
+Resource state is the current state of a resource on a server at any point of time – and it has nothing to do with the interaction between client and server. It is what you get as a response from the server as API response. You refer to it as resource representation.
+
+REST statelessness means being free on application state.
+
+###Advantages of Statelessness
+There are some very noticeable advantages for having REST APIs stateless.
+
+1. Statelessness helps in **scaling** the APIs to millions of concurrent users by deploying it to multiple servers. Any server can handle any request because there is no session related dependency.
+1. Being stateless makes REST APIs **less complex** – by removing all server-side state synchronization logic.
+1. A stateless API is also **easy to cache** as well. A specific software can decide whether or not to cache the result of an HTTP request just by looking at that one request. There’s no nagging uncertainty that state from a previous request might affect the cacheability of this one. It improves the performance of applications.
+1. The server **never loses track** of “where” each client is in the application because the client sends all necessary information with each request.

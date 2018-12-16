@@ -2,41 +2,49 @@
 
 ## DHCP
 
+Dynamic Host Configuration Protocol. Zorgt voor de **verdeling van IP-adressen**. Elke DHCP-server heeft een pool van vrije IP-adressen om uit te delen, en verdeelt deze met een bepaalde lease-time, waarna deze opnieuw worden vrijgegeven.
 
-Client					DHCP Server
-DHCP opties:
-Ip adres
-Subnetmask
-gateway
-dns
-dns suffix
+**Voordelen** dynamische ip-adressen:
 
+* Geen ip-configuratie nodig voor elk toestel, kan centraal beheerd worden.
+* Efficiënter omgaan met IP-adressen. Beperkt hierdoor kosten.
 
+Proces om IP-adres te verkrijgen loopt via **DORA**
 
-
-
-Switch toevoegen
-ip adres geven: netwerk config - 
-dhcp
+* **Discover**: client verstuurt broadcast naar alle computers binnen Ethernet-segment.
+* **Offer**: server biedt vrij IP-adres aan.
+* **Request**: client doet werkelijke aanvraag voor dit IP-adres (bij één DHCP-server, andere DHCP-servers zien via broadcast dat hun aanbod niet nodig is)
+* **Acknowledge**: server bevestigt de aanvraag
 
 
 ## DNS
 
-surf naar www.google.com -> zoekt ip adres
-Twee lokale opzoekingen, daarna neemt uw dns server het over. (lokaal is dat dns server van bv. telenet)
+**Domain Name System/Server** zorgt voor **vertaling tussen IP-adres en naam**. 
 
-check etc/hosts
-daarna dns cache
-daarna vraagt hij aan dns server in domein
+De DNS-Server houdt een tabel bij met Resource Records:
 
-client 		-> 	DNS server (hik.be) → internet root server
+* **A**: Address records - hostname to ip-address
+* **AAAA**: IPv6 Address records - hostname to IPv6-address
+* **CNAME**: Alias - hostname to other hostname (redirects)
+* **MX**: Mail Exchange record - specifiec mail server 
 
-root server verwijst u naar .com dns server → google.com dns server → drive.google.com dns server
+### Proces DNS request 
+
+* surf naar www.google.com -> zoekt ip adres
+* Twee lokale opzoekingen, daarna neemt uw dns server het over. (lokaal is dat dns server van bv. telenet)
+    * check etc/hosts
+    * daarna dns cache
+    * daarna vraagt hij aan dns server in domein. Indien DNS server in domein adres niet heeft
+        * root DNS Server
+            * .com
+                * google.com
+                    * drive.google.com
 
 
 ## Active Directory
 
 Kan niet zonder DNS! Voor AD moest je op elke PC een gebruiker aanmaken om te kunnen authenticeren. Authenticatie gaat via Kerberos op de Domain Controller (waar AD staat).
+
 Kerberos stuurt tickets voor toegang -> zie youtube video.
 
 Kleine bedrijven: kan via Azure AD, voor grote bedrijven niet voldoende (geen LDAP ondersteuning bvb.).
@@ -49,64 +57,57 @@ Host databank van AD
 Repliceren elkaar (niet zoals bij DNS waarbij één hoofd DNS (primary zone) en een backup 
 DNS (secondary zone)
 
+### Group Policies
 
+* Settings voor meerdere gebruikers of computers.
+* Twee verschillende zaken:
+    * Policies: afschermen van zaken
+    * Preferences: settings die de gebruiker kan het aanpassen
+* Client driven: de client vraagt aan de server welke policies hij/zij moet volgen
+* **Inheritence**: overerving van policies (kan afgezet worden). Wordt aangegeven door uitroepteken.
+* **Enforce**: wordt steeds toegepast (ook zonder inheritence). Wordt aangegeven door slotje.
+* Steeds groeperen per functie. Bvb. alle rdp policies groeperen. Scheiding van gebruiker/groepen.
 
-### Domain Controller:
+### Domain Controller configureren
 
-geef ip adres: 10.10
-installeer rollen
-maak domeincontroller: cursusdom.be
+* geef ip adres: 10.10
+* installeer rollen
+* maak domeincontroller: cursusdom.be
 
 5 rollen: (FSMO) (kunnen bij één domeincontroller)
-RID Master: verdeeld groepen van security identifiers aan de andere domein controllers: zijn deze op moet je opnieuw bij de RID master nieuwe keys ophalen.
-PDC emulator: distributie van verandering naar andere domein controllers
-Schema Master: houdt bij hoe u database er uit ziet.
-Domein Naming Master:
-Infrastructure Master:
+
+* RID Master: verdeeld groepen van security identifiers aan de andere domein controllers: zijn deze op moet je opnieuw bij de RID master nieuwe keys ophalen.
+* PDC emulator: distributie van verandering naar andere domein controllers
+* Schema Master: houdt bij hoe u database er uit ziet.
+* Domein Naming Master:
+* Infrastructure Master:
 
 
-Core
 
-Veel instellingen kunnen ook via sconfig
+### PC toevoegen aan domain
 
-1. naam wijzigen
-```
-get current computername: hostname
-wmic computersystem where caption='xp-pc' rename windows7-pc
-```
-2. ip aanpassen
-    1. get name of interface:
-netsh interface show interface
-change ip adress:
-netsh interface ip set address "Ethernet" static 10.0.0.100 255.255.0.0 10.0.0.1 1
-show change:
-netsh interface show interface
+**!Moet altijd vanuit Client!**
+
+To join a computer to a domain
+
+* On the Start screen, typeControl Panel, and then press ENTER.
+* Navigate to System and Security, and then click System.
+* Under Computer name, domain, and workgroup settings, click Change settings.
+* On the Computer Name tab, click Change.
+* Under Member of, click Domain, type the name of the domain that this computer will join, and then click OK.
+* Click OK, and then restart the computer.
 
 
-3. windows update uitzetten
-BETER via powershell:
-stop-service wuauserv
-set-service wuauserv -StartupType Disabled
-firewall uitzetten
-netsh advfirewall set  allprofiles state off
+Via powershell: 
 
-Toevoegen aan domain (cursusdom.be)
 1. Eerst moet je DNS Server configureren, anders geraak je niet aan het domein
     * netsh interface ipv4 add dnsserver "Ethernet" address=192.168.x.x index=1
-2. Met volgende command kan je de lokale pc toevoegen aan het domein. Hierbij moet je je authenticeren met een account van het domein.
+1. Met volgende command kan je de lokale pc toevoegen aan het domein. Hierbij moet je je authenticeren met een account van het domein.
     * netdom join %THE_COMPUTER_NAME% /domain:OPSCODEDEMO.COM /userd:Administrator /passwordd:xxx
-Kan rechtstreeks (via GUI) via system - 
-Fileserver van maken
-Kan eenvoudiger via de Domein Controller - Server Manager - All Servers - Server toevoegen via zoekfunctie - Functies en rollen installeren.
-start powershell
-Install-WindowsFeature –Name FS-Resource-Manager
-Folder C:DATA sharen
-Beter via Server manager: fileserver - shares - tasks - new
-New-SMBShare –Name "Shared" –Path "C:\Shared" ` –ContinuouslyAvailable ` –FullAccess domain\admingroup `
-Test via nieuwe netwerklocatie aan te maken: \\ServerCore\Data
-Kan ook gewoon via \\ServerCore -> laat alle shared mappen zien
+
+
 
-Mogelijke problemen:
+#### Mogelijke problemen:
 
 - IP instellingen:
 - fixed IP
@@ -117,7 +118,7 @@ Mogelijke problemen:
 - Check of DNS werkt. (ping domein ipv ip-adres of NSLookup)
 
 
-## AGDLP
+### AGDLP
 Account
 Global Group
 Domain Local Group
@@ -145,6 +146,23 @@ Voordeel van computer toe te voegen op domein:
 iedere gebruiker binnen domein kan aanmelden via die pc
 pc kan beheerd worden vanaf netwerk
 
+
+## Fileserver
+
+* Kan rechtstreeks (via GUI) via system - 
+* Kan eenvoudiger via de Domein Controller 
+    * Server Manager 
+    * All Servers 
+    * Server toevoegen via zoekfunctie 
+    * Functies en rollen installeren.
+* start powershell
+* Install-WindowsFeature –Name FS-Resource-Manager
+* Folder C:DATA sharen
+
+* Beter via Server manager: fileserver - shares - tasks - new
+* New-SMBShare –Name "Shared" –Path "C:\Shared" ` –ContinuouslyAvailable ` –FullAccess domain\admingroup `
+* Test via nieuwe netwerklocatie aan te maken: \\ServerCore\Data
+* Kan ook gewoon via \\ServerCore -> laat alle shared mappen zien
 
 ##Powershell
 
@@ -201,3 +219,34 @@ Shows current date.
 Get-Date -Day 1 -Month 7 -Year (Get-Date).Year
 --- toont op welke dag 1 juli van het huidig jaar valt 
 ```
+
+
+
+Oefing Core
+
+Veel instellingen kunnen ook via sconfig
+
+1. naam wijzigen
+    ```
+    get current computername: hostname
+    wmic computersystem where caption='xp-pc' rename windows7-pc
+    ```
+1. ip aanpassen
+    * get name of interface:
+        ```netsh interface show interface```
+    * change ip adress:
+        ```netsh interface ip set address "Ethernet" static 10.0.0.100 255.255.0.0 10.0.0.1 1```
+    * show change:
+        ```netsh interface show interface```
+
+1. windows update uitzetten
+    * BETER via powershell:
+
+        ```
+        stop-service wuauserv
+        set-service wuauserv -StartupType Disabled
+        ```
+
+1. firewall uitzetten
+
+    ```netsh advfirewall set  allprofiles state off```
