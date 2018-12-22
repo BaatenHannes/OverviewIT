@@ -1,5 +1,9 @@
 #Netwerkbeheer
 
+## Nieuwe VM aanmaken
+
+
+
 ## DHCP
 
 Dynamic Host Configuration Protocol. Zorgt voor de **verdeling van IP-adressen**. Elke DHCP-server heeft een pool van vrije IP-adressen om uit te delen, en verdeelt deze met een bepaalde lease-time, waarna deze opnieuw worden vrijgegeven.
@@ -97,6 +101,7 @@ To join a computer to a domain
 * Under Member of, click Domain, type the name of the domain that this computer will join, and then click OK.
 * Click OK, and then restart the computer.
 
+**DONT RENAME AND ADD TO DOMAIN AT THE SAME TIME**
 
 Via powershell: 
 
@@ -146,6 +151,20 @@ Voordeel van computer toe te voegen op domein:
 iedere gebruiker binnen domein kan aanmelden via die pc
 pc kan beheerd worden vanaf netwerk
 
+
+### Domain Administrator
+
+#### Difference between local admin and domain admin
+
+> Before a Domain Controller is promoted to that role, it is a simple workgroup (standalone) server and has a local Administrator account and a local Administrators group. When you create a domain, those accounts don't go away; they're incorporated into the domain as the domain Administrator account and the domain builtin\Administrators group.
+
+> The builtin\Administrators group has Administrative access to the Domain Controllers, but is not automatically granted administrative access to all computers within the domain, whereas Domain Admins are.
+
+## WIN10 Client
+
+* Computername: CL10
+* Username: Local_Admin
+* Password: R1234-56
 
 ## Fileserver
 

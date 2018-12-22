@@ -1,4 +1,4 @@
-# Web API
+# REST API
 
 ## Return types
 

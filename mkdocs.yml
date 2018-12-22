@@ -1,13 +1,13 @@
 site_name: Overview
 nav:
-- Home: 'index.md'
 - Theory:
-    - 'Theory': 'concepts.md'
+    - 'Theory': 'index.md'
 - Technology:
     - 'MkDocs': 'mkdocs.md'
     - 'GIT': 'git.md'
     - 'CSS': 'css.md'
-    - 'Web API': 'web_api.md'
+    - 'REST API': 'web_api.md'
+    - 'SOAP': 'soap.md'
 - Other:
     - 'Netwerkbeheer': 'netwerkbeheer.md'
 theme: cinder
