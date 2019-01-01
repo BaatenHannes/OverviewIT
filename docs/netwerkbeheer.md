@@ -2,7 +2,9 @@
 
 ## Nieuwe VM aanmaken
 
-
+* Copy template to new map
+* Rename template and map
+* Add new VM - choose template when asked
 
 ## DHCP
 
@@ -19,6 +21,10 @@ Proces om IP-adres te verkrijgen loopt via **DORA**
 * **Offer**: server biedt vrij IP-adres aan.
 * **Request**: client doet werkelijke aanvraag voor dit IP-adres (bij één DHCP-server, andere DHCP-servers zien via broadcast dat hun aanbod niet nodig is)
 * **Acknowledge**: server bevestigt de aanvraag
+
+### Create new DHCP Server
+
+
 
 
 ## DNS
@@ -47,6 +53,8 @@ De DNS-Server houdt een tabel bij met Resource Records:
 
 ## Active Directory
 
+### Algemeen
+
 Kan niet zonder DNS! Voor AD moest je op elke PC een gebruiker aanmaken om te kunnen authenticeren. Authenticatie gaat via Kerberos op de Domain Controller (waar AD staat).
 
 Kerberos stuurt tickets voor toegang -> zie youtube video.
@@ -60,6 +68,14 @@ Functie Domein Controller(s):
 Host databank van AD
 Repliceren elkaar (niet zoals bij DNS waarbij één hoofd DNS (primary zone) en een backup 
 DNS (secondary zone)
+
+### Installatie
+
+**Indien DNS en AD DC zelfde server zijn:**
+* Wijzig naam server en herstart
+* Add role
+* Kies DNS erbij indien nodig
+* Zet IP-address en wijs DNS-server naar eigen IP-address!
 
 ### Group Policies
 
@@ -131,9 +147,9 @@ Permission
 
 | Account       | Global Group  | Domain Local Group    | Permission (use NTFS)     |
 | ------------- |-------------  | -----                 |---                        |
-| Jos.Smet      | GG_HR         | DL_HR_R(read)         |                           |
-|               | centered      | DL_HR_W(write)        | HR (share map)            |
-|               | are neat      |  DL_HR_FC(fullctr)    |                           |
+| Jos.Smet      | GG_HR         | DL_Facturen_R(read)         |                           |
+|               | centered      | DL_Facturen_W(write)        | Facturen (share map)            |
+|               | are neat      |  DL_Facturen_FC(fullctr)    |                           |
 
 
 **Bij folder sharen:**

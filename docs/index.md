@@ -436,3 +436,93 @@ Windows Communication Foundation, framework for building service-oriented applic
 Can use multiple transport protocols (HTTP, TCP, IPC, ...).
 Commonly uses SOAP messages over Http.
 Message queuing.
+
+## Yield
+
+Two advantages:
+* Custom iteration without creating temp collections
+* Stateful iteration
+
+Yield returns to the caller of the iteration, then goes back to the iteration. Normal iteration only stays in the iteration.
+
+### Custom iteration
+
+Iterate without needing to create a temp collection. Easy for filtering existing lists.
+
+In example below, the yield return keeps iterating over the foreach, where a normal return would escape the function.
+
+```c#
+
+    int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+    IEnumerable<int> filteredNumbers = GetNumbers(numbers); 
+
+    //gets a enumerable with all numbers > 5 
+    //without needing to create a temp collection
+    private IEnumerable<int> GetNumbers(int[] nums)
+    {
+        foreach (int number in nums)
+        {
+            if (number > 5)
+            {
+                yield return number;
+            }
+
+        }
+    }
+```
+
+
+### Stateful iteration
+
+When doing complex computations, yield can create the advantage that you can check for results before going to the next computation. A normal iteration needs to generate the full list first, then check for results.
+
+Yield gives the advantage of deferred execution, the list is only created dynamically while looping over the list. In example below, the check of i == 3 happens on each yield return, the yield return statements of 4 and 5 never happen. 
+
+*example 1*
+```c#
+    private static int GetItemFromList()
+    {
+        foreach (int i in GetList())
+        {
+            if (i == 3)
+            {
+                return i;
+            }
+        }
+        return 0;
+    }
+
+    private static IEnumerable<int> GetList()
+    {
+        yield return 1;
+        yield return 2;
+        yield return 3;
+        yield return 4;
+        yield return 5;
+    }
+```
+
+*example 2*
+```c#
+    void ConsumeLoop() {
+        foreach (Consumable item in ProduceList())        // might have to wait here
+            item.Consume();
+    }
+
+    IEnumerable<Consumable> ProduceList() {
+        while (KeepProducing())
+            yield return ProduceExpensiveConsumable();    // expensive
+    }
+    Without yield, the call to ProduceList() might take a long time because you have to complete the list before returning:
+
+    //pseudo-assembly
+    Produce consumable[0]                   // expensive operation, e.g. disk I/O
+    Produce consumable[1]                   // waiting...
+    Produce consumable[2]                   // waiting...
+    Produce consumable[3]                   // completed the consumable list
+    Consume consumable[0]                   // start consuming
+    Consume consumable[1]
+    Consume consumable[2]
+    Consume consumable[3]
+```
