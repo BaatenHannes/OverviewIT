@@ -1,262 +1,983 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <link rel="shortcut icon" href="../img/favicon.ico">
 
-    <title>Netwerkbeheer - Overview</title>
 
-    <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.018/css/hack.min.css">
-    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
-    <link href="../css/base.css" rel="stylesheet">
-    <link href="../css/cinder.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/highlight.css">
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-        <![endif]-->
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.1">
+    
+    
+      
+        <title>Netwerkbeheer - Overview</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.3020aac5.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.01ccdecf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#netwerkbeheer" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Overview" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Overview
+            </span>
+            <span class="md-header-nav__topic">
+              Netwerkbeheer
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="Overview" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Overview
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
 
-    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
-    <script>
-    WebFont.load({
-        google: {
-            families: ['Open Sans', 'PT Sans']
-        }
-    });
-    </script>
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      Theory
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Theory
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Theory" class="md-nav__link">
+      Theory
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../webhosting/" title="WebHosting" class="md-nav__link">
+      WebHosting
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
 
     
-</head>
+      
+      
+      
 
-<body>
 
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-
-        <!-- Collapsed navigation -->
-        <div class="navbar-header">
-            <!-- Expander button -->
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            
-
-            <!-- Main title -->
-
-            <a class="navbar-brand" href="..">Overview</a>
-        </div>
-
-        <!-- Expanded navigation -->
-        <div class="navbar-collapse collapse">
-                <!-- Main navigation -->
-                <ul class="nav navbar-nav">
-                
-                
-                    <li >
-                        <a href="..">Home</a>
-                    </li>
-                
-                
-                
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Theory <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                        
-                            
-<li >
-    <a href="../concepts/">Theory</a>
-</li>
-
-                        
-                        </ul>
-                    </li>
-                
-                
-                
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Technology <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                        
-                            
-<li >
-    <a href="../mkdocs/">MkDocs</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../git/">GIT</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../css/">CSS</a>
-</li>
-
-                        
-                        </ul>
-                    </li>
-                
-                
-                
-                    <li class="dropdown active">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Andere <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                        
-                            
-<li class="active">
-    <a href="./">Netwerkbeheer</a>
-</li>
-
-                        
-                        </ul>
-                    </li>
-                
-                
-                </ul>
-
-            <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
-                            <i class="fa fa-search"></i> Search
-                        </a>
-                    </li>
-                    <li >
-                        <a rel="next" href="../css/">
-                            <i class="fa fa-arrow-left"></i> Previous
-                        </a>
-                    </li>
-                    <li class="disabled">
-                        <a rel="prev" >
-                            Next <i class="fa fa-arrow-right"></i>
-                        </a>
-                    </li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-    <div class="container">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Technology
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Technology
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
         
         
-        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
-    <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#netwerkbeheer">Netwerkbeheer</a></li>
-            <li class="second-level"><a href="#dhcp">DHCP</a></li>
-                
-            <li class="second-level"><a href="#dns">DNS</a></li>
-                
-            <li class="second-level"><a href="#active-directory">Active Directory</a></li>
-                
-                <li class="third-level"><a href="#domain-controller">Domain Controller:</a></li>
-            <li class="second-level"><a href="#agdlp">AGDLP</a></li>
-                
-            <li class="second-level"><a href="#powershell">Powershell</a></li>
-                
-                <li class="third-level"><a href="#syntax">Syntax</a></li>
-                <li class="third-level"><a href="#useful-commands">Useful commands</a></li>
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mkdocs/" title="MkDocs" class="md-nav__link">
+      MkDocs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../git/" title="GIT" class="md-nav__link">
+      GIT
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../css/" title="CSS" class="md-nav__link">
+      CSS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../web_api/" title="REST API" class="md-nav__link">
+      REST API
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../soap/" title="SOAP" class="md-nav__link">
+      SOAP
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Other
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Other
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Netwerkbeheer
+      </label>
+    
+    <a href="./" title="Netwerkbeheer" class="md-nav__link md-nav__link--active">
+      Netwerkbeheer
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nieuwe-vm-aanmaken" title="Nieuwe VM aanmaken" class="md-nav__link">
+    Nieuwe VM aanmaken
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dhcp" title="DHCP" class="md-nav__link">
+    DHCP
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-new-dhcp-server" title="Create new DHCP Server" class="md-nav__link">
+    Create new DHCP Server
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dns" title="DNS" class="md-nav__link">
+    DNS
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proces-dns-request" title="Proces DNS request" class="md-nav__link">
+    Proces DNS request
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#active-directory" title="Active Directory" class="md-nav__link">
+    Active Directory
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#algemeen" title="Algemeen" class="md-nav__link">
+    Algemeen
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installatie" title="Installatie" class="md-nav__link">
+    Installatie
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#group-policies" title="Group Policies" class="md-nav__link">
+    Group Policies
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#domain-controller-configureren" title="Domain Controller configureren" class="md-nav__link">
+    Domain Controller configureren
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pc-toevoegen-aan-domain" title="PC toevoegen aan domain" class="md-nav__link">
+    PC toevoegen aan domain
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mogelijke-problemen" title="Mogelijke problemen:" class="md-nav__link">
+    Mogelijke problemen:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agdlp" title="AGDLP" class="md-nav__link">
+    AGDLP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#domain-administrator" title="Domain Administrator" class="md-nav__link">
+    Domain Administrator
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#difference-between-local-admin-and-domain-admin" title="Difference between local admin and domain admin" class="md-nav__link">
+    Difference between local admin and domain admin
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#win10-client" title="WIN10 Client" class="md-nav__link">
+    WIN10 Client
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fileserver" title="Fileserver" class="md-nav__link">
+    Fileserver
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#powershell" title="Powershell" class="md-nav__link">
+    Powershell
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntax" title="Syntax" class="md-nav__link">
+    Syntax
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#psitem-or-_" title="$PSItem or $_" class="md-nav__link">
+    $PSItem or $_
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparators" title="Comparators" class="md-nav__link">
+    Comparators
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#useful-commands" title="Useful commands" class="md-nav__link">
+    Useful commands
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-process" title="Get-process" class="md-nav__link">
+    Get-process
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop-process" title="Stop-process" class="md-nav__link">
+    Stop-process
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-date" title="Get-Date" class="md-nav__link">
+    Get-Date
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
     </ul>
-</div></div>
-        <div class="col-md-9" role="main">
+  
+</nav>
+    
+  </li>
 
-<h1 id="netwerkbeheer">Netwerkbeheer</h1>
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../linux/" title="Linux" class="md-nav__link">
+      Linux
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nieuwe-vm-aanmaken" title="Nieuwe VM aanmaken" class="md-nav__link">
+    Nieuwe VM aanmaken
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dhcp" title="DHCP" class="md-nav__link">
+    DHCP
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-new-dhcp-server" title="Create new DHCP Server" class="md-nav__link">
+    Create new DHCP Server
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dns" title="DNS" class="md-nav__link">
+    DNS
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proces-dns-request" title="Proces DNS request" class="md-nav__link">
+    Proces DNS request
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#active-directory" title="Active Directory" class="md-nav__link">
+    Active Directory
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#algemeen" title="Algemeen" class="md-nav__link">
+    Algemeen
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installatie" title="Installatie" class="md-nav__link">
+    Installatie
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#group-policies" title="Group Policies" class="md-nav__link">
+    Group Policies
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#domain-controller-configureren" title="Domain Controller configureren" class="md-nav__link">
+    Domain Controller configureren
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pc-toevoegen-aan-domain" title="PC toevoegen aan domain" class="md-nav__link">
+    PC toevoegen aan domain
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mogelijke-problemen" title="Mogelijke problemen:" class="md-nav__link">
+    Mogelijke problemen:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agdlp" title="AGDLP" class="md-nav__link">
+    AGDLP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#domain-administrator" title="Domain Administrator" class="md-nav__link">
+    Domain Administrator
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#difference-between-local-admin-and-domain-admin" title="Difference between local admin and domain admin" class="md-nav__link">
+    Difference between local admin and domain admin
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#win10-client" title="WIN10 Client" class="md-nav__link">
+    WIN10 Client
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fileserver" title="Fileserver" class="md-nav__link">
+    Fileserver
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#powershell" title="Powershell" class="md-nav__link">
+    Powershell
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntax" title="Syntax" class="md-nav__link">
+    Syntax
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#psitem-or-_" title="$PSItem or $_" class="md-nav__link">
+    $PSItem or $_
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparators" title="Comparators" class="md-nav__link">
+    Comparators
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#useful-commands" title="Useful commands" class="md-nav__link">
+    Useful commands
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-process" title="Get-process" class="md-nav__link">
+    Get-process
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop-process" title="Stop-process" class="md-nav__link">
+    Stop-process
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-date" title="Get-Date" class="md-nav__link">
+    Get-Date
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="netwerkbeheer">Netwerkbeheer</h1>
+<h2 id="nieuwe-vm-aanmaken">Nieuwe VM aanmaken</h2>
+<ul>
+<li>Copy template to new map</li>
+<li>Rename template and map</li>
+<li>Add new VM - choose template when asked</li>
+</ul>
 <h2 id="dhcp">DHCP</h2>
-<p>Client                  DHCP Server
-DHCP opties:
-Ip adres
-Subnetmask
-gateway
-dns
-dns suffix</p>
-<p>Switch toevoegen
-ip adres geven: netwerk config - 
-dhcp</p>
+<p>Dynamic Host Configuration Protocol. Zorgt voor de <strong>verdeling van IP-adressen</strong>. Elke DHCP-server heeft een pool van vrije IP-adressen om uit te delen, en verdeelt deze met een bepaalde lease-time, waarna deze opnieuw worden vrijgegeven.</p>
+<p><strong>Voordelen</strong> dynamische ip-adressen:</p>
+<ul>
+<li>Geen ip-configuratie nodig voor elk toestel, kan centraal beheerd worden.</li>
+<li>Efficiënter omgaan met IP-adressen. Beperkt hierdoor kosten.</li>
+</ul>
+<p>Proces om IP-adres te verkrijgen loopt via <strong>DORA</strong></p>
+<ul>
+<li><strong>Discover</strong>: client verstuurt broadcast naar alle computers binnen Ethernet-segment.</li>
+<li><strong>Offer</strong>: server biedt vrij IP-adres aan.</li>
+<li><strong>Request</strong>: client doet werkelijke aanvraag voor dit IP-adres (bij één DHCP-server, andere DHCP-servers zien via broadcast dat hun aanbod niet nodig is)</li>
+<li><strong>Acknowledge</strong>: server bevestigt de aanvraag</li>
+</ul>
+<h3 id="create-new-dhcp-server">Create new DHCP Server</h3>
 <h2 id="dns">DNS</h2>
-<p>surf naar www.google.com -&gt; zoekt ip adres
-Twee lokale opzoekingen, daarna neemt uw dns server het over. (lokaal is dat dns server van bv. telenet)</p>
-<p>check etc/hosts
-daarna dns cache
-daarna vraagt hij aan dns server in domein</p>
-<p>client      -&gt;  DNS server (hik.be) → internet root server</p>
-<p>root server verwijst u naar .com dns server → google.com dns server → drive.google.com dns server</p>
+<p><strong>Domain Name System/Server</strong> zorgt voor <strong>vertaling tussen IP-adres en naam</strong>. </p>
+<p>De DNS-Server houdt een tabel bij met Resource Records:</p>
+<ul>
+<li><strong>A</strong>: Address records - hostname to ip-address</li>
+<li><strong>AAAA</strong>: IPv6 Address records - hostname to IPv6-address</li>
+<li><strong>CNAME</strong>: Alias - hostname to other hostname (redirects)</li>
+<li><strong>MX</strong>: Mail Exchange record - specifiec mail server </li>
+</ul>
+<h3 id="proces-dns-request">Proces DNS request</h3>
+<ul>
+<li>surf naar www.google.com -&gt; zoekt ip adres</li>
+<li>Twee lokale opzoekingen, daarna neemt uw dns server het over. (lokaal is dat dns server van bv. telenet)<ul>
+<li>check etc/hosts</li>
+<li>daarna dns cache</li>
+<li>daarna vraagt hij aan dns server in domein. Indien DNS server in domein adres niet heeft<ul>
+<li>root DNS Server<ul>
+<li>.com<ul>
+<li>google.com<ul>
+<li>drive.google.com</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <h2 id="active-directory">Active Directory</h2>
-<p>Kan niet zonder DNS! Voor AD moest je op elke PC een gebruiker aanmaken om te kunnen authenticeren. Authenticatie gaat via Kerberos op de Domain Controller (waar AD staat).
-Kerberos stuurt tickets voor toegang -&gt; zie youtube video.</p>
+<h3 id="algemeen">Algemeen</h3>
+<p>Kan niet zonder DNS! Voor AD moest je op elke PC een gebruiker aanmaken om te kunnen authenticeren. Authenticatie gaat via Kerberos op de Domain Controller (waar AD staat).</p>
+<p>Kerberos stuurt tickets voor toegang -&gt; zie youtube video.</p>
 <p>Kleine bedrijven: kan via Azure AD, voor grote bedrijven niet voldoende (geen LDAP ondersteuning bvb.).</p>
 <p>Kan onder meerdere domeinen (subdomeinen dan eigenlijk). Maar geeft problemen voor authenticatie in cloud, dus meer en meer één groot domein.</p>
 <p>Functie Domein Controller(s):
 Host databank van AD
 Repliceren elkaar (niet zoals bij DNS waarbij één hoofd DNS (primary zone) en een backup 
 DNS (secondary zone)</p>
-<h3 id="domain-controller">Domain Controller:</h3>
-<p>geef ip adres: 10.10
-installeer rollen
-maak domeincontroller: cursusdom.be</p>
-<p>5 rollen: (FSMO) (kunnen bij één domeincontroller)
-RID Master: verdeeld groepen van security identifiers aan de andere domein controllers: zijn deze op moet je opnieuw bij de RID master nieuwe keys ophalen.
-PDC emulator: distributie van verandering naar andere domein controllers
-Schema Master: houdt bij hoe u database er uit ziet.
-Domein Naming Master:
-Infrastructure Master:</p>
-<p>Core</p>
-<p>Veel instellingen kunnen ook via sconfig</p>
-<ol>
-<li>naam wijzigen</li>
-</ol>
-<pre><code>get current computername: hostname
-wmic computersystem where caption='xp-pc' rename windows7-pc
-</code></pre>
-
-<ol>
-<li>
-<p>ip aanpassen</p>
-<ol>
-<li>get name of interface:
-netsh interface show interface
-change ip adress:
-netsh interface ip set address "Ethernet" static 10.0.0.100 255.255.0.0 10.0.0.1 1
-show change:
-netsh interface show interface</li>
-</ol>
+<h3 id="installatie">Installatie</h3>
+<p><strong>Indien DNS en AD DC zelfde server zijn:</strong>
+* Wijzig naam server en herstart
+* Add role
+* Kies DNS erbij indien nodig
+* Zet IP-address en wijs DNS-server naar eigen IP-address!</p>
+<h3 id="group-policies">Group Policies</h3>
+<ul>
+<li>Settings voor meerdere gebruikers of computers.</li>
+<li>Twee verschillende zaken:<ul>
+<li>Policies: afschermen van zaken</li>
+<li>Preferences: settings die de gebruiker kan het aanpassen</li>
+</ul>
 </li>
-<li>
-<p>windows update uitzetten
-BETER via powershell:
-stop-service wuauserv
-set-service wuauserv -StartupType Disabled
-firewall uitzetten
-netsh advfirewall set  allprofiles state off</p>
+<li>Client driven: de client vraagt aan de server welke policies hij/zij moet volgen</li>
+<li><strong>Inheritence</strong>: overerving van policies (kan afgezet worden). Wordt aangegeven door uitroepteken.</li>
+<li><strong>Enforce</strong>: wordt steeds toegepast (ook zonder inheritence). Wordt aangegeven door slotje.</li>
+<li>Steeds groeperen per functie. Bvb. alle rdp policies groeperen. Scheiding van gebruiker/groepen.</li>
+</ul>
+<h3 id="domain-controller-configureren">Domain Controller configureren</h3>
+<ul>
+<li>geef ip adres: 10.10</li>
+<li>installeer rollen</li>
+<li>maak domeincontroller: cursusdom.be</li>
+</ul>
+<p>5 rollen: (FSMO) (kunnen bij één domeincontroller)</p>
+<ul>
+<li>RID Master: verdeeld groepen van security identifiers aan de andere domein controllers: zijn deze op moet je opnieuw bij de RID master nieuwe keys ophalen.</li>
+<li>PDC emulator: distributie van verandering naar andere domein controllers</li>
+<li>Schema Master: houdt bij hoe u database er uit ziet.</li>
+<li>Domein Naming Master:</li>
+<li>Infrastructure Master:</li>
+</ul>
+<h3 id="pc-toevoegen-aan-domain">PC toevoegen aan domain</h3>
+<p><strong>!Moet altijd vanuit Client!</strong></p>
+<p>To join a computer to a domain</p>
+<ul>
+<li>On the Start screen, typeControl Panel, and then press ENTER.</li>
+<li>Navigate to System and Security, and then click System.</li>
+<li>Under Computer name, domain, and workgroup settings, click Change settings.</li>
+<li>On the Computer Name tab, click Change.</li>
+<li>Under Member of, click Domain, type the name of the domain that this computer will join, and then click OK.</li>
+<li>Click OK, and then restart the computer.</li>
+</ul>
+<p><strong>DONT RENAME AND ADD TO DOMAIN AT THE SAME TIME</strong></p>
+<p>Via powershell: </p>
+<ol>
+<li>Eerst moet je DNS Server configureren, anders geraak je niet aan het domein<ul>
+<li>netsh interface ipv4 add dnsserver "Ethernet" address=192.168.x.x index=1</li>
+</ul>
+</li>
+<li>Met volgende command kan je de lokale pc toevoegen aan het domein. Hierbij moet je je authenticeren met een account van het domein.<ul>
+<li>netdom join %THE_COMPUTER_NAME% /domain:OPSCODEDEMO.COM /userd:Administrator /passwordd:xxx</li>
+</ul>
 </li>
 </ol>
-<p>Toevoegen aan domain (cursusdom.be)
-1. Eerst moet je DNS Server configureren, anders geraak je niet aan het domein
-    * netsh interface ipv4 add dnsserver "Ethernet" address=192.168.x.x index=1
-2. Met volgende command kan je de lokale pc toevoegen aan het domein. Hierbij moet je je authenticeren met een account van het domein.
-    * netdom join %THE_COMPUTER_NAME% /domain:OPSCODEDEMO.COM /userd:Administrator /passwordd:xxx
-Kan rechtstreeks (via GUI) via system - 
-Fileserver van maken
-Kan eenvoudiger via de Domein Controller - Server Manager - All Servers - Server toevoegen via zoekfunctie - Functies en rollen installeren.
-start powershell
-Install-WindowsFeature –Name FS-Resource-Manager
-Folder C:DATA sharen
-Beter via Server manager: fileserver - shares - tasks - new
-New-SMBShare –Name "Shared" –Path "C:\Shared" <code>–ContinuouslyAvailable</code> –FullAccess domain\admingroup `
-Test via nieuwe netwerklocatie aan te maken: \ServerCore\Data
-Kan ook gewoon via \ServerCore -&gt; laat alle shared mappen zien
-
-Mogelijke problemen:</p>
+<h4 id="mogelijke-problemen">Mogelijke problemen:</h4>
 <ul>
 <li>IP instellingen:</li>
 <li>fixed IP</li>
@@ -266,7 +987,7 @@ Mogelijke problemen:</p>
 <li>Firewall? Pingen indien geen reply en bovenstaande is ok -&gt; Firewall staat op</li>
 <li>Check of DNS werkt. (ping domein ipv ip-adres of NSLookup)</li>
 </ul>
-<h2 id="agdlp">AGDLP</h2>
+<h3 id="agdlp">AGDLP</h3>
 <p>Account
 Global Group
 Domain Local Group
@@ -284,19 +1005,19 @@ Permission</p>
 <tr>
 <td>Jos.Smet</td>
 <td>GG_HR</td>
-<td>DL_HR_R(read)</td>
+<td>DL_Facturen_R(read)</td>
 <td></td>
 </tr>
 <tr>
 <td></td>
 <td>centered</td>
-<td>DL_HR_W(write)</td>
-<td>HR (share map)</td>
+<td>DL_Facturen_W(write)</td>
+<td>Facturen (share map)</td>
 </tr>
 <tr>
 <td></td>
 <td>are neat</td>
-<td>DL_HR_FC(fullctr)</td>
+<td>DL_Facturen_FC(fullctr)</td>
 <td></td>
 </tr>
 </tbody>
@@ -313,6 +1034,40 @@ Inheritance altijd uit</p>
 <p>Voordeel van computer toe te voegen op domein: 
 iedere gebruiker binnen domein kan aanmelden via die pc
 pc kan beheerd worden vanaf netwerk</p>
+<h3 id="domain-administrator">Domain Administrator</h3>
+<h4 id="difference-between-local-admin-and-domain-admin">Difference between local admin and domain admin</h4>
+<blockquote>
+<p>Before a Domain Controller is promoted to that role, it is a simple workgroup (standalone) server and has a local Administrator account and a local Administrators group. When you create a domain, those accounts don't go away; they're incorporated into the domain as the domain Administrator account and the domain builtin\Administrators group.</p>
+<p>The builtin\Administrators group has Administrative access to the Domain Controllers, but is not automatically granted administrative access to all computers within the domain, whereas Domain Admins are.</p>
+</blockquote>
+<h2 id="win10-client">WIN10 Client</h2>
+<ul>
+<li>Computername: CL10</li>
+<li>Username: Local_Admin</li>
+<li>Password: R1234-56</li>
+</ul>
+<h2 id="fileserver">Fileserver</h2>
+<ul>
+<li>Kan rechtstreeks (via GUI) via system - </li>
+<li>Kan eenvoudiger via de Domein Controller <ul>
+<li>Server Manager </li>
+<li>All Servers </li>
+<li>Server toevoegen via zoekfunctie </li>
+<li>Functies en rollen installeren.</li>
+</ul>
+</li>
+<li>start powershell</li>
+<li>Install-WindowsFeature –Name FS-Resource-Manager</li>
+<li>
+<p>Folder C:DATA sharen</p>
+</li>
+<li>
+<p>Beter via Server manager: fileserver - shares - tasks - new</p>
+</li>
+<li>New-SMBShare –Name "Shared" –Path "C:\Shared" <code>–ContinuouslyAvailable</code> –FullAccess domain\admingroup `</li>
+<li>Test via nieuwe netwerklocatie aan te maken: \ServerCore\Data</li>
+<li>Kan ook gewoon via \ServerCore -&gt; laat alle shared mappen zien</li>
+</ul>
 <h2 id="powershell">Powershell</h2>
 <h3 id="syntax">Syntax</h3>
 <h4 id="psitem-or-_">$PSItem or $_</h4>
@@ -359,55 +1114,113 @@ stop-process -name notepad -whatif --- check which processes would have been sto
 (Get-Date).AddYears/AddDays/ --- add amount of time to dat
 Get-Date -Day 1 -Month 7 -Year (Get-Date).Year
 --- toont op welke dag 1 juli van het huidig jaar valt 
-</code></pre></div>
-        
-        
-    </div>
+</code></pre>
 
-    <footer class="col-md-12 text-center">
-        <hr>
-        <p>
-        <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p></small>
-    </footer>
+<p>Oefing Core</p>
+<p>Veel instellingen kunnen ook via sconfig</p>
+<ol>
+<li>naam wijzigen
+    <code>get current computername: hostname
+    wmic computersystem where caption='xp-pc' rename windows7-pc</code></li>
+<li>
+<p>ip aanpassen</p>
+<ul>
+<li>get name of interface:
+    <code>netsh interface show interface</code></li>
+<li>change ip adress:
+    <code>netsh interface ip set address "Ethernet" static 10.0.0.100 255.255.0.0 10.0.0.1 1</code></li>
+<li>show change:
+    <code>netsh interface show interface</code></li>
+</ul>
+</li>
+<li>
+<p>windows update uitzetten</p>
+<ul>
+<li>
+<p>BETER via powershell:</p>
+<p><code>stop-service wuauserv
+set-service wuauserv -StartupType Disabled</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>firewall uitzetten</p>
+<p><code>netsh advfirewall set  allprofiles state off</code></p>
+</li>
+</ol>
+                
+                  
+                
+              
+              
+                
 
-    <script src="../js/jquery-1.10.2.min.js"></script>
-    <script src="../js/bootstrap-3.0.3.min.js"></script>
-    <script src="../js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    <script>
-    var base_url = '..';
-    </script>
-    <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
-    <script src="../js/base.js"></script>
-    <script src="../search/main.js"></script>
 
-    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">
-                        <span aria-hidden="true">&times;</span>
-                        <span class="sr-only">Close</span>
-                    </button>
-                    <h4 class="modal-title" id="exampleModalLabel">Search</h4>
-                </div>
-                <div class="modal-body">
-                    <p>
-                        From here you can search these documents. Enter your search terms below.
-                    </p>
-                    <form role="form">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
-                        </div>
-                    </form>
-                    <div id="mkdocs-search-results"></div>
-                </div>
-                <div class="modal-footer">
-                </div>
-            </div>
+              
+            </article>
+          </div>
         </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../soap/" title="SOAP" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                SOAP
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../linux/" title="Linux" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Linux
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
     </div>
-
-    </body>
-
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.dc02f8ce.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
 </html>
