@@ -289,6 +289,30 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../rabbitmq/" title="RabbitMQ" class="md-nav__link">
+      RabbitMQ
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sql/" title="SQL" class="md-nav__link">
+      SQL
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -446,6 +470,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#permissions" title="Permissions" class="md-nav__link">
+    Permissions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#viewing-permissions" title="Viewing permissions" class="md-nav__link">
+    Viewing permissions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changing-permissions" title="Changing permissions" class="md-nav__link">
+    Changing permissions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -569,6 +620,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#permissions" title="Permissions" class="md-nav__link">
+    Permissions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#viewing-permissions" title="Viewing permissions" class="md-nav__link">
+    Viewing permissions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changing-permissions" title="Changing permissions" class="md-nav__link">
+    Changing permissions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -651,8 +729,41 @@ Multi step process is needed to decouple the Operating System from the basic BIO
 <li><code>pstree</code> show the Process tree</li>
 <li><code>ps</code> shows current running processes</li>
 <li><code>top</code>shows an overview of all processes which keeps updating (like task manager)</li>
-<li><code>free</code> shows memory management</li>
+<li><code>free</code> shows memory management    </li>
 </ul>
+<h2 id="permissions">Permissions</h2>
+<p><a href="" title="https://www.computerhope.com/unix/uchmod.htm">Source</a></p>
+<h3 id="viewing-permissions">Viewing permissions</h3>
+<p>Permissons are managed by  rwx bits. </p>
+<ul>
+<li>-r read</li>
+<li>-w write</li>
+<li>-x execute</li>
+</ul>
+<p>You can view these permissions by following command: <code>ls -l filename.txt</code> The permissions are managed for three different users/groups: </p>
+<ul>
+<li>u: User</li>
+<li>g: Group</li>
+<li>o: Others (all)</li>
+</ul>
+<p>Example output:</p>
+<p><img alt="Permissions" src="/img/permission_linux.png" /></p>
+<p><code>-rw-rw-r-- 1 home home</code> can be interpreted as read/write for home user, read/write for home group, read for all.</p>
+<p><strong>Permissions are only valid for the contents of the file, not the file itself.</strong> Renaming a file for example looks at the permissions for the upper directory, instead of the file itself.</p>
+<h3 id="changing-permissions">Changing permissions</h3>
+<p><code>chmod options permissions file name</code></p>
+<ul>
+<li>Example symbolic mode: <code>chmod u=rwx,g=rx,o=r myfile</code></li>
+<li>Example numeric mode: <code>chmod 754 myfile</code></li>
+</ul>
+<p>Numeric mode:</p>
+<ul>
+<li>4: "read"</li>
+<li>2: "write"</li>
+<li>1: "execute"</li>
+<li>0: "no permission."</li>
+</ul>
+<p>So 7 is the combination of permissions 4+2+1 (read, write, and execute), 5 is 4+0+1 (read, no write, and execute), and 4 is 4+0+0 (read, no write, and no execute).</p>
                 
                   
                 

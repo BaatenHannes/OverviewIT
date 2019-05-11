@@ -36,7 +36,7 @@
     
     
       
-        <title>WebHosting - Overview</title>
+        <title>SQL - Overview</title>
       
     
     
@@ -75,7 +75,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#iis" tabindex="1" class="md-skip">
+      <a href="#sql" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -100,7 +100,7 @@
               Overview
             </span>
             <span class="md-header-nav__topic">
-              WebHosting
+              SQL
             </span>
           
         </div>
@@ -166,12 +166,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
     
     <label class="md-nav__link" for="nav-1">
       Theory
@@ -199,65 +197,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        WebHosting
-      </label>
-    
-    <a href="./" title="WebHosting" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../webhosting/" title="WebHosting" class="md-nav__link">
       WebHosting
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#iis" title="IIS" class="md-nav__link">
-    IIS
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#application-pools" title="Application Pools" class="md-nav__link">
-    Application Pools
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#httprequest-lifecycle" title="HttpRequest Lifecycle" class="md-nav__link">
-    HttpRequest Lifecycle
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -270,10 +214,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       Technology
@@ -361,11 +307,83 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../sql/" title="SQL" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        SQL
+      </label>
+    
+    <a href="./" title="SQL" class="md-nav__link md-nav__link--active">
       SQL
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#indexing" title="Indexing" class="md-nav__link">
+    Indexing
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clustered-index" title="Clustered index" class="md-nav__link">
+    Clustered index
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#non-clustered-index" title="Non-clustered index" class="md-nav__link">
+    Non-clustered index
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pages" title="Pages" class="md-nav__link">
+    Pages
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#page-splits-and-fill-factor" title="Page Splits and Fill factor" class="md-nav__link">
+    Page Splits and Fill factor
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -436,21 +454,30 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#iis" title="IIS" class="md-nav__link">
-    IIS
+  <a href="#indexing" title="Indexing" class="md-nav__link">
+    Indexing
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#application-pools" title="Application Pools" class="md-nav__link">
-    Application Pools
+  <a href="#clustered-index" title="Clustered index" class="md-nav__link">
+    Clustered index
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#non-clustered-index" title="Non-clustered index" class="md-nav__link">
+    Non-clustered index
   </a>
   
 </li>
@@ -461,8 +488,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#httprequest-lifecycle" title="HttpRequest Lifecycle" class="md-nav__link">
-    HttpRequest Lifecycle
+  <a href="#pages" title="Pages" class="md-nav__link">
+    Pages
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#page-splits-and-fill-factor" title="Page Splits and Fill factor" class="md-nav__link">
+    Page Splits and Fill factor
   </a>
   
 </li>
@@ -484,51 +518,35 @@
               
                 
                 
-                  <h1>WebHosting</h1>
-                
-                <p>There are large differences between Web Server Software and the way they handle HttpRequests. This article covers Internet Information Services.</p>
-<p>Hosting ASP.NET Core in IIS <a href="https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/?view=aspnetcore-2.2">https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/?view=aspnetcore-2.2</a></p>
-<p>IIS and Application Pools Explanation <a href="https://stackify.com/iis-web-server/">https://stackify.com/iis-web-server/</a></p>
-<h3 id="iis">IIS</h3>
-<p>Web servers handle requests in different ways. Two main ways are to:</p>
+                <h1 id="sql">SQL</h1>
+<p><a href="https://www.red-gate.com/simple-talk/sql/learn-sql-server/sql-server-index-basics/">Overview Source</a></p>
+<h2 id="indexing">Indexing</h2>
+<p>Indexing is basically sorting your data on a specified column to improve searching by that column. </p>
+<p>Advantages:</p>
 <ul>
-<li>handle all requests on a single thread (with worker threads, e.g. Node.js)</li>
-<li>spawn a new thread for each request (IIS)</li>
+<li>Improves performance on reading</li>
 </ul>
-<h4 id="application-pools">Application Pools</h4>
-<p>A single application pool creates at least one worker process (w3wp.exe). This process runs an instance of your application and handles the request send to your web server. (These application pools are visible in IIS Manager). This process runs your application code or returnes a static page.</p>
-<p>IIS creates a virtual user for each app pool. These users can also be viewed in your file explorer, as they each have their own folders (music etc.).</p>
-<p>App pools recycle by default every 29 hours or when a config file changes. This recycling frees up memory used by runaway processes.</p>
-<p><em>Advantage of using application pools</em>
-An Application Pool can contain one or more applications and allows us to configure a level of isolation between different Web applications. For example, if you want to isolate all the Web applications running in the same computer, you can do this by creating a separate application pool for every Web application and placing them in their corresponding application pool. Because each application pool runs in its own worker process, <em>errors in one application pool will not affect the applications running in other application pools</em>. </p>
-<h3 id="httprequest-lifecycle">HttpRequest Lifecycle</h3>
-<p>Web Applications require a lot of technologies to build our code .When the user interacts with the app causes several HTTP request to run parallel. The http request life cycle is described as below:-</p>
+<p>Disadvantages:</p>
 <ul>
-<li>Web Browser submits the request to the server after creating a socket in local progress.</li>
-<li>The http server waits for the request to come on socket i.e. port-80.</li>
-<li>The web browser translates the yahoo.com to an IP address if it does not knows it.</li>
-<li>If the web browser does not recognize the address it contacts a DNS Server to resolve the name.</li>
-<li>The browser will open a TCP connection to the IP address of yahoo.com and send a HTTP GET request over.</li>
-<li>The request is then submitted to DNS server where IP address is fetched based on domain name.</li>
-<li>Now the request is submitted to Http Server as per HTTP protocol.</li>
-<li>Http server receives the request and shifts the client to another socket.</li>
-<li>So the socket on port-80 is released to receive request from other clients.</li>
-<li>Web Browser &amp; server both are connected to each other.</li>
-<li>The server will process the request, renders the response &amp; breaks the connection.</li>
+<li>Decrease performance when writing data because of page splits</li>
+<li>Non-clustered indexes need extra physical memory space</li>
 </ul>
-<p><img alt="HttpLifeCycle" src="/img/httplifecycle.png" /></p>
-<p>More information on <a href="https://docs.microsoft.com/en-us/iis/get-started/introduction-to-iis/introduction-to-iis-architecture#http-request-processing-in-iis">https://docs.microsoft.com/en-us/iis/get-started/introduction-to-iis/introduction-to-iis-architecture#http-request-processing-in-iis</a></p>
-<ol>
-<li>When a client browser initiates an HTTP request for a resource on the Web server, HTTP.sys intercepts the request.</li>
-<li>HTTP.sys contacts WAS to obtain information from the configuration store.</li>
-<li>WAS requests configuration information from the configuration store, applicationHost.config.</li>
-<li>The WWW Service receives configuration information, such as application pool and site configuration.</li>
-<li>The WWW Service uses the configuration information to configure HTTP.sys.</li>
-<li>WAS starts a worker process for the application pool to which the request was made.</li>
-<li>The worker process processes the request and returns a response to HTTP.sys.</li>
-<li>The client receives a response.</li>
-</ol>
-<p><img alt="HttpRequest" src="/img/iishttprequest.png" /></p>
+<h3 id="clustered-index">Clustered index</h3>
+<p>Clustered index is a physical sorting of the data by the chosen column. Therefore you can only have one clustered index per table. A primary key or unique contraint will by default act as a clustered index if you do not specify a clusterd index.</p>
+<h3 id="non-clustered-index">Non-clustered index</h3>
+<p>Non-clustered index is an index that is sorted by the chosen column, and keeps a pointer to the row instead of the actual data. You can define multiple non-clustered indices.</p>
+<h2 id="pages">Pages</h2>
+<p><a href="https://docs.microsoft.com/en-us/sql/relational-databases/pages-and-extents-architecture-guide?view=sql-server-2017">Microsoft Docs Source</a></p>
+<p><img alt="B-Tree" src="/img/Index_B_Tree.jpg" /></p>
+<p><code>When a query is issued against an indexed column, the query engine starts at the root node and navigates down through the intermediate nodes, with each layer of the intermediate level more granular than the one above. The query engine continues down through the index nodes until it reaches the leaf node. For example, if you’re searching for the value 123 in an indexed column, the query engine would first look in the root level to determine which page to reference in the top intermediate level. In this example, the first page points the values 1-100, and the second page, the values 101-200, so the query engine would go to the second page on that level. The query engine would then determine that it must go to the third page at the next intermediate level. From there, the query engine would navigate to the leaf node for value 123. The leaf node will contain either the entire row of data or a pointer to that row, depending on whether the index is clustered or nonclustered.</code></p>
+<h2 id="page-splits-and-fill-factor">Page Splits and Fill factor</h2>
+<p><a href="https://docs.microsoft.com/en-us/sql/relational-databases/indexes/specify-fill-factor-for-an-index?view=sql-server-2017">Microsoft Docs Source</a></p>
+<p>Table and index data is stored in 'pages' of 8kb. Fill-factor will define how much extra space you leave open for future expansion of the index. If the pages are filled by 100 (fillfactor 0 or 100), the creation of an extra row, or the update of an existing index with extra data, will (or might) cause the page to split. This will move 50% of the page to a new page to make room for the new data, and will cause a performance hit. Fill-factor is defined between 1-100, being the percentage to fill the page with. The remainder will be left open between the rows.</p>
+<p>Considerations:</p>
+<ul>
+<li>Do not use a fillfactor of less then 100 on a identity column index. New data will always be generated at the end of the last page, so leaving extra space will only take more memory without preventing page-splits. This can only be usefull when you can update the existing identity column with extra data.</li>
+<li>A smaller fillfactor will reduce requirements for page splits, but will also decrease read performance and increase memory usage.</li>
+</ul>
                 
                   
                 
@@ -549,7 +567,7 @@ An Application Pool can contain one or more applications and allows us to config
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href=".." title="Theory" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../rabbitmq/" title="RabbitMQ" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -558,19 +576,19 @@ An Application Pool can contain one or more applications and allows us to config
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Theory
+                RabbitMQ
               </span>
             </div>
           </a>
         
         
-          <a href="../mkdocs/" title="MkDocs" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../netwerkbeheer/" title="Netwerkbeheer" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                MkDocs
+                Netwerkbeheer
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

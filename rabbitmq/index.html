@@ -36,7 +36,7 @@
     
     
       
-        <title>WebHosting - Overview</title>
+        <title>RabbitMQ - Overview</title>
       
     
     
@@ -75,7 +75,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#iis" tabindex="1" class="md-skip">
+      <a href="#rabbitmq" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -100,7 +100,7 @@
               Overview
             </span>
             <span class="md-header-nav__topic">
-              WebHosting
+              RabbitMQ
             </span>
           
         </div>
@@ -166,12 +166,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
     
     <label class="md-nav__link" for="nav-1">
       Theory
@@ -199,65 +197,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        WebHosting
-      </label>
-    
-    <a href="./" title="WebHosting" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../webhosting/" title="WebHosting" class="md-nav__link">
       WebHosting
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#iis" title="IIS" class="md-nav__link">
-    IIS
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#application-pools" title="Application Pools" class="md-nav__link">
-    Application Pools
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#httprequest-lifecycle" title="HttpRequest Lifecycle" class="md-nav__link">
-    HttpRequest Lifecycle
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -270,10 +214,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       Technology
@@ -349,11 +295,131 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../rabbitmq/" title="RabbitMQ" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        RabbitMQ
+      </label>
+    
+    <a href="./" title="RabbitMQ" class="md-nav__link md-nav__link--active">
       RabbitMQ
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exchanges" title="Exchanges" class="md-nav__link">
+    Exchanges
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#queues" title="Queues" class="md-nav__link">
+    Queues
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consumer" title="Consumer" class="md-nav__link">
+    Consumer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acknowledge" title="Acknowledge" class="md-nav__link">
+    Acknowledge
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#virtual-host" title="Virtual Host" class="md-nav__link">
+    Virtual Host
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scaling" title="Scaling" class="md-nav__link">
+    Scaling
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clustering" title="Clustering" class="md-nav__link">
+    Clustering
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rabbitmq-federationshovel" title="RabbitMQ Federation/Shovel" class="md-nav__link">
+    RabbitMQ Federation/Shovel
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-without-remove" title="Read without remove" class="md-nav__link">
+    Read without remove
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#masstransit-command-vs-event" title="MassTransit: Command vs Event" class="md-nav__link">
+    MassTransit: Command vs Event
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -436,21 +502,73 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#iis" title="IIS" class="md-nav__link">
-    IIS
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#application-pools" title="Application Pools" class="md-nav__link">
-    Application Pools
+  <a href="#exchanges" title="Exchanges" class="md-nav__link">
+    Exchanges
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#queues" title="Queues" class="md-nav__link">
+    Queues
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consumer" title="Consumer" class="md-nav__link">
+    Consumer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acknowledge" title="Acknowledge" class="md-nav__link">
+    Acknowledge
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#virtual-host" title="Virtual Host" class="md-nav__link">
+    Virtual Host
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scaling" title="Scaling" class="md-nav__link">
+    Scaling
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clustering" title="Clustering" class="md-nav__link">
+    Clustering
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rabbitmq-federationshovel" title="RabbitMQ Federation/Shovel" class="md-nav__link">
+    RabbitMQ Federation/Shovel
   </a>
   
 </li>
@@ -459,11 +577,23 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#httprequest-lifecycle" title="HttpRequest Lifecycle" class="md-nav__link">
-    HttpRequest Lifecycle
+        
+          <li class="md-nav__item">
+  <a href="#read-without-remove" title="Read without remove" class="md-nav__link">
+    Read without remove
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#masstransit-command-vs-event" title="MassTransit: Command vs Event" class="md-nav__link">
+    MassTransit: Command vs Event
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -484,51 +614,70 @@
               
                 
                 
-                  <h1>WebHosting</h1>
-                
-                <p>There are large differences between Web Server Software and the way they handle HttpRequests. This article covers Internet Information Services.</p>
-<p>Hosting ASP.NET Core in IIS <a href="https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/?view=aspnetcore-2.2">https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/?view=aspnetcore-2.2</a></p>
-<p>IIS and Application Pools Explanation <a href="https://stackify.com/iis-web-server/">https://stackify.com/iis-web-server/</a></p>
-<h3 id="iis">IIS</h3>
-<p>Web servers handle requests in different ways. Two main ways are to:</p>
+                <h1 id="rabbitmq">RabbitMQ</h1>
+<h2 id="overview">Overview</h2>
+<p>To prevent too many connections from opening, only one connection is opened, and channels are logically divided to run on that one connection.
+- one physical connection
+- multiple 'logical' connections -&gt; channels</p>
+<h3 id="exchanges">Exchanges</h3>
 <ul>
-<li>handle all requests on a single thread (with worker threads, e.g. Node.js)</li>
-<li>spawn a new thread for each request (IIS)</li>
+<li>Direct -&gt; routing key to a single queue</li>
+<li>Fanout -&gt; dispatch to all queues bound to this exchange without routing key</li>
+<li>Topic -&gt; routing key with regex like routing</li>
+<li>Header</li>
 </ul>
-<h4 id="application-pools">Application Pools</h4>
-<p>A single application pool creates at least one worker process (w3wp.exe). This process runs an instance of your application and handles the request send to your web server. (These application pools are visible in IIS Manager). This process runs your application code or returnes a static page.</p>
-<p>IIS creates a virtual user for each app pool. These users can also be viewed in your file explorer, as they each have their own folders (music etc.).</p>
-<p>App pools recycle by default every 29 hours or when a config file changes. This recycling frees up memory used by runaway processes.</p>
-<p><em>Advantage of using application pools</em>
-An Application Pool can contain one or more applications and allows us to configure a level of isolation between different Web applications. For example, if you want to isolate all the Web applications running in the same computer, you can do this by creating a separate application pool for every Web application and placing them in their corresponding application pool. Because each application pool runs in its own worker process, <em>errors in one application pool will not affect the applications running in other application pools</em>. </p>
-<h3 id="httprequest-lifecycle">HttpRequest Lifecycle</h3>
-<p>Web Applications require a lot of technologies to build our code .When the user interacts with the app causes several HTTP request to run parallel. The http request life cycle is described as below:-</p>
+<h3 id="queues">Queues</h3>
 <ul>
-<li>Web Browser submits the request to the server after creating a socket in local progress.</li>
-<li>The http server waits for the request to come on socket i.e. port-80.</li>
-<li>The web browser translates the yahoo.com to an IP address if it does not knows it.</li>
-<li>If the web browser does not recognize the address it contacts a DNS Server to resolve the name.</li>
-<li>The browser will open a TCP connection to the IP address of yahoo.com and send a HTTP GET request over.</li>
-<li>The request is then submitted to DNS server where IP address is fetched based on domain name.</li>
-<li>Now the request is submitted to Http Server as per HTTP protocol.</li>
-<li>Http server receives the request and shifts the client to another socket.</li>
-<li>So the socket on port-80 is released to receive request from other clients.</li>
-<li>Web Browser &amp; server both are connected to each other.</li>
-<li>The server will process the request, renders the response &amp; breaks the connection.</li>
+<li>Persistant -&gt; data is kept on restart (stored phyically)</li>
+<li>Transient -&gt; data is lost on restart</li>
 </ul>
-<p><img alt="HttpLifeCycle" src="/img/httplifecycle.png" /></p>
-<p>More information on <a href="https://docs.microsoft.com/en-us/iis/get-started/introduction-to-iis/introduction-to-iis-architecture#http-request-processing-in-iis">https://docs.microsoft.com/en-us/iis/get-started/introduction-to-iis/introduction-to-iis-architecture#http-request-processing-in-iis</a></p>
-<ol>
-<li>When a client browser initiates an HTTP request for a resource on the Web server, HTTP.sys intercepts the request.</li>
-<li>HTTP.sys contacts WAS to obtain information from the configuration store.</li>
-<li>WAS requests configuration information from the configuration store, applicationHost.config.</li>
-<li>The WWW Service receives configuration information, such as application pool and site configuration.</li>
-<li>The WWW Service uses the configuration information to configure HTTP.sys.</li>
-<li>WAS starts a worker process for the application pool to which the request was made.</li>
-<li>The worker process processes the request and returns a response to HTTP.sys.</li>
-<li>The client receives a response.</li>
-</ol>
-<p><img alt="HttpRequest" src="/img/iishttprequest.png" /></p>
+<p>Message TTL: can be declared by developers on publish, or inherited by queue. Default is no end time to live.</p>
+<h3 id="consumer">Consumer</h3>
+<h3 id="acknowledge">Acknowledge</h3>
+<p>How to make sure message is succesfully produced or consumed.</p>
+<p>Producer</p>
+<ul>
+<li>Transaction: callback after commit sending multiple messages</li>
+<li>Notification: (on single message)</li>
+</ul>
+<p>Consumer</p>
+<ul>
+<li>Manual acknowledge: in code explicit (automatically in MassTransit,, together with retry)</li>
+<li>Automatic acknowledge: </li>
+</ul>
+<h3 id="virtual-host">Virtual Host</h3>
+<p>Name - to differentiate between different environments, each with its own credentials.
+Virtual hosts for different clients - to seperate different client needs.
+Each has its own user, exchanges and queues.</p>
+<h3 id="scaling">Scaling</h3>
+<h4 id="clustering">Clustering</h4>
+<p>Node - installation of rabbitMq. Cluster contains multiple nodes (or installations).
+To avoid single point of failure.
+Can be automatically or manually build. (join cluster wit cmd)
+-&gt; queues (definition) is replicated, data is not automatically replicated. 
+-&gt; apply a policy to enforce data replication - mirrored queue
+-&gt; data is consumed from one master node</p>
+<p>-&gt; load balancer needed as intermediate layer, to shield the producer from referencing mutliple nodes (with ip and port etc).</p>
+<p>Good from raising Availability, but lowers Performance.</p>
+<h4 id="rabbitmq-federationshovel">RabbitMQ Federation/Shovel</h4>
+<p>Federation: possibility to produce to one cluster, but consume from another cluster.
+Source and destination cluster.
+Federation link between the clusters (queues or exchanges).
+Also usefull for linking data between two physical location (for complete disaster failure of one cluster).</p>
+<h3 id="read-without-remove">Read without remove</h3>
+<p>Negative acknowledge is possible - reads but not removes from queue.</p>
+<p>HttpPort: 15672 voor GUI
+AMQP-port: 5672</p>
+<h3 id="masstransit-command-vs-event">MassTransit: Command vs Event</h3>
+<ul>
+<li>Command with one consumer</li>
+<li>Event with multiple consumers</li>
+</ul>
+<p>Sending or Publishing will generate an Exchange
+Consuming will generate an exchange that is coupled to the publisher exchange together with a queue.</p>
+<p>MassTransit consumer - multiple consumers possible without destroying message on ackn. Masstransit will create a general consumer in the background to publish messages to multiple consumers. (Adds a consumer layer.)</p>
+<p>Questions:
+ - large or small messages</p>
                 
                   
                 
@@ -549,7 +698,7 @@ An Application Pool can contain one or more applications and allows us to config
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href=".." title="Theory" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../soap/" title="SOAP" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -558,19 +707,19 @@ An Application Pool can contain one or more applications and allows us to config
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Theory
+                SOAP
               </span>
             </div>
           </a>
         
         
-          <a href="../mkdocs/" title="MkDocs" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../sql/" title="SQL" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                MkDocs
+                SQL
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
