@@ -2,12 +2,16 @@ site_name: Overview
 nav:
 - Theory:
     - 'Theory': 'index.md'
+    - 'WebHosting': 'webhosting.md'
 - Technology:
     - 'MkDocs': 'mkdocs.md'
     - 'GIT': 'git.md'
     - 'CSS': 'css.md'
     - 'REST API': 'web_api.md'
     - 'SOAP': 'soap.md'
+    - 'RabbitMQ': 'rabbitmq.md'
+    - 'SQL': 'sql.md'
 - Other:
     - 'Netwerkbeheer': 'netwerkbeheer.md'
-theme: cinder
+    - 'Linux': 'linux.md'
+theme: material

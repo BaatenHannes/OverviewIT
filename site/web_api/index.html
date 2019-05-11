@@ -36,7 +36,7 @@
     
     
       
-        <title>GIT - Overview</title>
+        <title>REST API - Overview</title>
       
     
     
@@ -75,7 +75,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#git" tabindex="1" class="md-skip">
+      <a href="#rest-api" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -100,7 +100,7 @@
               Overview
             </span>
             <span class="md-header-nav__topic">
-              GIT
+              REST API
             </span>
           
         </div>
@@ -247,104 +247,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        GIT
-      </label>
-    
-    <a href="./" title="GIT" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../git/" title="GIT" class="md-nav__link">
       GIT
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" title="Overview" class="md-nav__link">
-    Overview
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#initialize" title="Initialize" class="md-nav__link">
-    Initialize
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#saving-changes" title="Saving changes" class="md-nav__link">
-    Saving changes
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#stashing-changes" title="Stashing changes" class="md-nav__link">
-    Stashing changes
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#syncing-with-remote-repository" title="Syncing with remote repository" class="md-nav__link">
-    Syncing with remote repository
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configuring-remote" title="Configuring remote" class="md-nav__link">
-    Configuring remote
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pushing" title="Pushing" class="md-nav__link">
-    Pushing
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#merge-vs-rebase" title="Merge vs Rebase" class="md-nav__link">
-    Merge vs Rebase
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -364,11 +271,83 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../web_api/" title="REST API" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        REST API
+      </label>
+    
+    <a href="./" title="REST API" class="md-nav__link md-nav__link--active">
       REST API
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#return-types" title="Return types" class="md-nav__link">
+    Return types
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post" title="POST" class="md-nav__link">
+    POST
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#putpatch" title="PUT/PATCH" class="md-nav__link">
+    PUT/PATCH
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-by-id" title="GET BY ID" class="md-nav__link">
+    GET BY ID
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-all" title="GET ALL" class="md-nav__link">
+    GET ALL
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -482,58 +461,37 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" title="Overview" class="md-nav__link">
-    Overview
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#initialize" title="Initialize" class="md-nav__link">
-    Initialize
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#saving-changes" title="Saving changes" class="md-nav__link">
-    Saving changes
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#stashing-changes" title="Stashing changes" class="md-nav__link">
-    Stashing changes
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#syncing-with-remote-repository" title="Syncing with remote repository" class="md-nav__link">
-    Syncing with remote repository
+  <a href="#return-types" title="Return types" class="md-nav__link">
+    Return types
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#configuring-remote" title="Configuring remote" class="md-nav__link">
-    Configuring remote
+  <a href="#post" title="POST" class="md-nav__link">
+    POST
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#pushing" title="Pushing" class="md-nav__link">
-    Pushing
+  <a href="#putpatch" title="PUT/PATCH" class="md-nav__link">
+    PUT/PATCH
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#merge-vs-rebase" title="Merge vs Rebase" class="md-nav__link">
-    Merge vs Rebase
+  <a href="#get-by-id" title="GET BY ID" class="md-nav__link">
+    GET BY ID
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-all" title="GET ALL" class="md-nav__link">
+    GET ALL
   </a>
   
 </li>
@@ -560,98 +518,32 @@
               
                 
                 
-                <h1 id="git">GIT</h1>
-<h2 id="overview">Overview</h2>
-<p>Git is a version-control system for tracking changes in computer files and coordinating work on those files among multiple people.</p>
-<p>Example: stage, commit and push changes to remote repository called origin.</p>
-<pre><code>git add *
-git commit -m &quot;bugfix&quot;
-git fetch origin
-git pull origin
-git push origin --all 
-</code></pre>
-
-<p>Example: push exisiting project to new remote repository (without readme)
-Step 1: Create local repository and commit changes</p>
-<pre><code>git init
-git add .
-git commit -m &quot;Initial commit&quot;
-</code></pre>
-
-<p>Step 2: add remote and push changes to remote</p>
-<pre><code>git remote add origin remote_origin_url
-git remote -v (verifies then new remote URL)
-git push origin master 
-</code></pre>
-
-<hr />
-<h2 id="initialize">Initialize</h2>
+                <h1 id="rest-api">REST API</h1>
+<h2 id="return-types">Return types</h2>
+<p><a href="http://shengwangi.blogspot.com/2016/02/response-for-get-post-put-delete-in-rest.html">OVERZICHT</a>
+<a href="https://docs.microsoft.com/en-us/aspnet/core/web-api/action-return-types?view=aspnetcore-2.2">Link to Microsoft Documentations</a></p>
+<h3 id="post">POST</h3>
 <ul>
-<li>
-<p><code>git init</code> --- create new local repository</p>
-</li>
-<li>
-<p><code>git clone</code> --- create copy of an existing repository, automatically creates a remote connection called origin</p>
-</li>
+<li>201 Created</li>
+<li>400 Bad Request</li>
 </ul>
-<hr />
-<h2 id="saving-changes">Saving changes</h2>
-<p>The commands: <code>git add</code>, <code>git status</code>, and <code>git commit</code> are all used in combination to save a snapshot of a Git project's current state.</p>
+<p>Return the path to get the created item. You can also include the created item in the body.
+<code>return CreatedAtAction(nameof(GetById), new { id = product.Id }, product);</code></p>
+<h3 id="putpatch">PUT/PATCH</h3>
 <ul>
-<li>
-<p><code>git add</code> --- stages changes</p>
-</li>
-<li>
-<p><code>git status</code> --- checks which files are staged</p>
-</li>
-<li>
-<p><code>git reset</code> --- undo a git add</p>
-</li>
-<li>
-<p><code>git commit</code> --- commits the staged changes to the <strong>local</strong> repository</p>
-</li>
+<li>204 NoContent</li>
+<li>400 Bad Request</li>
+<li>404 Not Found</li>
 </ul>
-<hr />
-<h2 id="stashing-changes">Stashing changes</h2>
-<p>Stashing takes your uncommitted changes <strong>(both staged and unstaged)</strong>, saves them away for later use, and then reverts them from your working copy. </p>
+<h3 id="get-by-id">GET BY ID</h3>
 <ul>
-<li>
-<p><code>git stash</code> --- temporarily shelves changes</p>
-</li>
-<li>
-<p><code>git stash pop</code> --- reaplly stashed changes to local working copy</p>
-</li>
+<li>200 Ok</li>
+<li>404 Not Found</li>
 </ul>
-<p>Git stash does not stash untracked files (new files). To stash new files you can add -u (--include-untracked)</p>
+<h3 id="get-all">GET ALL</h3>
 <ul>
-<li><code>git stash -u</code> --- stashes changes with untracked files</li>
+<li>200 Ok (returns empty list if no objects are found)</li>
 </ul>
-<hr />
-<h2 id="syncing-with-remote-repository">Syncing with remote repository</h2>
-<h3 id="configuring-remote">Configuring remote</h3>
-<p>A remote repository can be reached through a URL and credentials. Git remote allows you to creates an alias for easy use of the URL of the remote repository.</p>
-<ul>
-<li>
-<p><code>git remote</code> --- get current remote configurations</p>
-</li>
-<li>
-<p><code>git remote -v</code> --- same as the above but includes the URL of each remote</p>
-</li>
-<li>
-<p><code>git remote add &lt;name&gt; &lt;url&gt;</code> --- adds a new remote</p>
-</li>
-<li>
-<p><code>git remote rm &lt;name&gt;</code> --- remove remote</p>
-</li>
-</ul>
-<h3 id="pushing">Pushing</h3>
-<ul>
-<li><code>git push &lt;remote&gt; &lt;branch&gt;</code> </li>
-</ul>
-<h3 id="merge-vs-rebase">Merge vs Rebase</h3>
-<p>Both try to achieve the same result, but rebase rewrites the history by 'rebasing' one branch on top of the other, creating a lineair history. This prevents cluttering with merge commits, but can create confusing situations by creating a different history with other team members. <a href="https://www.atlassian.com/git/tutorials/merging-vs-rebasing">Link to explanation</a></p>
-<p><img alt="Merge" src="../img/merge.svg" /></p>
-<p><img alt="Rebase" src="../img/rebase.svg" /></p>
                 
                   
                 
@@ -672,7 +564,7 @@ git push origin master
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../mkdocs/" title="MkDocs" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../css/" title="CSS" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -681,19 +573,19 @@ git push origin master
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                MkDocs
+                CSS
               </span>
             </div>
           </a>
         
         
-          <a href="../css/" title="CSS" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../soap/" title="SOAP" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                CSS
+                SOAP
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
