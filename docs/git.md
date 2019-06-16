@@ -91,3 +91,12 @@ Both try to achieve the same result, but rebase rewrites the history by 'rebasin
 ![Merge](\img\merge.svg)
 
 ![Rebase](\img\rebase.svg)
+
+
+### Git Reset
+
+If you made a local commit, but did not push it to remote yet, you can use a git reset to 'remove' the commit and keep or throw away the changes.
+
+-soft -- will keep the changes of the commit and stage them
+-mixed -- will keep the changes of the commit, but will not stage them
+-hard -- will throw away the changes of the commit

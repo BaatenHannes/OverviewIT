@@ -41,3 +41,15 @@ Considerations:
 
 * Do not use a fillfactor of less then 100 on a identity column index. New data will always be generated at the end of the last page, so leaving extra space will only take more memory without preventing page-splits. This can only be usefull when you can update the existing identity column with extra data.
 * A smaller fillfactor will reduce requirements for page splits, but will also decrease read performance and increase memory usage.
+
+
+## Query optimization
+
+### Execution plan
+
+#### Order of execution
+
+Difference between logical order and the physical execution order. The logical order is defined by your query, the Query Optimizer will use these logical requirements and try to create the most optimal physical execution order. 
+
+#### Nested loops
+
