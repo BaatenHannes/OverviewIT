@@ -332,6 +332,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#git-reset" title="Git Reset" class="md-nav__link">
+    Git Reset
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -404,6 +411,18 @@
   <li class="md-nav__item">
     <a href="../sql/" title="SQL" class="md-nav__link">
       SQL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../winforms/" title="Winforms" class="md-nav__link">
+      Winforms
     </a>
   </li>
 
@@ -538,6 +557,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#git-reset" title="Git Reset" class="md-nav__link">
+    Git Reset
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -652,6 +678,11 @@ git push origin master
 <p>Both try to achieve the same result, but rebase rewrites the history by 'rebasing' one branch on top of the other, creating a lineair history. This prevents cluttering with merge commits, but can create confusing situations by creating a different history with other team members. <a href="https://www.atlassian.com/git/tutorials/merging-vs-rebasing">Link to explanation</a></p>
 <p><img alt="Merge" src="../img/merge.svg" /></p>
 <p><img alt="Rebase" src="../img/rebase.svg" /></p>
+<h3 id="git-reset">Git Reset</h3>
+<p>If you made a local commit, but did not push it to remote yet, you can use a git reset to 'remove' the commit and keep or throw away the changes.</p>
+<p>-soft -- will keep the changes of the commit and stage them
+-mixed -- will keep the changes of the commit, but will not stage them
+-hard -- will throw away the changes of the commit</p>
                 
                   
                 
