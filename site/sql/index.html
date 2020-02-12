@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.1">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.2">
     
     
       
@@ -40,17 +40,17 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.3020aac5.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.adb8469c.css">
       
       
     
     
-      <script src="../assets/javascripts/modernizr.01ccdecf.js"></script>
+      <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -75,7 +75,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#sql" tabindex="1" class="md-skip">
+      <a href="#sql" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -84,7 +84,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href=".." title="Overview" class="md-header-nav__button md-logo">
+        <a href=".." title="Overview" aria-label="Overview" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -100,7 +100,9 @@
               Overview
             </span>
             <span class="md-header-nav__topic">
-              SQL
+              
+                SQL
+              
             </span>
           
         </div>
@@ -113,7 +115,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
       <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
         &#xE5CD;
@@ -143,7 +145,7 @@
         
       
       
-      <main class="md-main">
+      <main class="md-main" role="main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
             
@@ -336,7 +338,7 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#indexing" title="Indexing" class="md-nav__link">
+  <a href="#indexing" class="md-nav__link">
     Indexing
   </a>
   
@@ -344,14 +346,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#clustered-index" title="Clustered index" class="md-nav__link">
+  <a href="#clustered-index" class="md-nav__link">
     Clustered index
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#non-clustered-index" title="Non-clustered index" class="md-nav__link">
+  <a href="#non-clustered-index" class="md-nav__link">
     Non-clustered index
   </a>
   
@@ -363,16 +365,56 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pages" title="Pages" class="md-nav__link">
+  <a href="#pages" class="md-nav__link">
     Pages
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#page-splits-and-fill-factor" title="Page Splits and Fill factor" class="md-nav__link">
+  <a href="#page-splits-and-fill-factor" class="md-nav__link">
     Page Splits and Fill factor
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-optimization" class="md-nav__link">
+    Query optimization
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#execution-plan" class="md-nav__link">
+    Execution plan
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#order-of-execution" class="md-nav__link">
+    Order of execution
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-loops" class="md-nav__link">
+    Nested loops
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -384,6 +426,18 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../winforms/" title="Winforms" class="md-nav__link">
+      Winforms
+    </a>
   </li>
 
         
@@ -461,7 +515,7 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#indexing" title="Indexing" class="md-nav__link">
+  <a href="#indexing" class="md-nav__link">
     Indexing
   </a>
   
@@ -469,14 +523,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#clustered-index" title="Clustered index" class="md-nav__link">
+  <a href="#clustered-index" class="md-nav__link">
     Clustered index
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#non-clustered-index" title="Non-clustered index" class="md-nav__link">
+  <a href="#non-clustered-index" class="md-nav__link">
     Non-clustered index
   </a>
   
@@ -488,16 +542,56 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pages" title="Pages" class="md-nav__link">
+  <a href="#pages" class="md-nav__link">
     Pages
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#page-splits-and-fill-factor" title="Page Splits and Fill factor" class="md-nav__link">
+  <a href="#page-splits-and-fill-factor" class="md-nav__link">
     Page Splits and Fill factor
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-optimization" class="md-nav__link">
+    Query optimization
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#execution-plan" class="md-nav__link">
+    Execution plan
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#order-of-execution" class="md-nav__link">
+    Order of execution
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-loops" class="md-nav__link">
+    Nested loops
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -547,8 +641,14 @@
 <li>Do not use a fillfactor of less then 100 on a identity column index. New data will always be generated at the end of the last page, so leaving extra space will only take more memory without preventing page-splits. This can only be usefull when you can update the existing identity column with extra data.</li>
 <li>A smaller fillfactor will reduce requirements for page splits, but will also decrease read performance and increase memory usage.</li>
 </ul>
+<h2 id="query-optimization">Query optimization</h2>
+<h3 id="execution-plan">Execution plan</h3>
+<h4 id="order-of-execution">Order of execution</h4>
+<p>Difference between logical order and the physical execution order. The logical order is defined by your query, the Query Optimizer will use these logical requirements and try to create the most optimal physical execution order. </p>
+<h4 id="nested-loops">Nested loops</h4>
                 
                   
+                
                 
               
               
@@ -582,13 +682,13 @@
           </a>
         
         
-          <a href="../netwerkbeheer/" title="Netwerkbeheer" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../winforms/" title="Winforms" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Netwerkbeheer
+                Winforms
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -604,9 +704,9 @@
       <div class="md-footer-copyright">
         
         powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
         and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs</a>
       </div>
       
@@ -616,7 +716,7 @@
       
     </div>
     
-      <script src="../assets/javascripts/application.dc02f8ce.js"></script>
+      <script src="../assets/javascripts/application.c33a9706.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       

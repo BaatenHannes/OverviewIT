@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.1">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.2">
     
     
       
@@ -40,17 +40,17 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.3020aac5.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.adb8469c.css">
       
       
     
     
-      <script src="../assets/javascripts/modernizr.01ccdecf.js"></script>
+      <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -75,7 +75,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#git" tabindex="1" class="md-skip">
+      <a href="#git" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -84,7 +84,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href=".." title="Overview" class="md-header-nav__button md-logo">
+        <a href=".." title="Overview" aria-label="Overview" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -100,7 +100,9 @@
               Overview
             </span>
             <span class="md-header-nav__topic">
-              GIT
+              
+                GIT
+              
             </span>
           
         </div>
@@ -113,7 +115,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
       <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
         &#xE5CD;
@@ -143,7 +145,7 @@
         
       
       
-      <main class="md-main">
+      <main class="md-main" role="main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
             
@@ -276,35 +278,35 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" title="Overview" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     Overview
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#initialize" title="Initialize" class="md-nav__link">
+  <a href="#initialize" class="md-nav__link">
     Initialize
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#saving-changes" title="Saving changes" class="md-nav__link">
+  <a href="#saving-changes" class="md-nav__link">
     Saving changes
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#stashing-changes" title="Stashing changes" class="md-nav__link">
+  <a href="#stashing-changes" class="md-nav__link">
     Stashing changes
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#syncing-with-remote-repository" title="Syncing with remote repository" class="md-nav__link">
+  <a href="#syncing-with-remote-repository" class="md-nav__link">
     Syncing with remote repository
   </a>
   
@@ -312,22 +314,29 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#configuring-remote" title="Configuring remote" class="md-nav__link">
+  <a href="#configuring-remote" class="md-nav__link">
     Configuring remote
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#pushing" title="Pushing" class="md-nav__link">
+  <a href="#pushing" class="md-nav__link">
     Pushing
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#merge-vs-rebase" title="Merge vs Rebase" class="md-nav__link">
+  <a href="#merge-vs-rebase" class="md-nav__link">
     Merge vs Rebase
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-reset" class="md-nav__link">
+    Git Reset
   </a>
   
 </li>
@@ -408,6 +417,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../winforms/" title="Winforms" class="md-nav__link">
+      Winforms
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -482,35 +503,35 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" title="Overview" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     Overview
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#initialize" title="Initialize" class="md-nav__link">
+  <a href="#initialize" class="md-nav__link">
     Initialize
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#saving-changes" title="Saving changes" class="md-nav__link">
+  <a href="#saving-changes" class="md-nav__link">
     Saving changes
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#stashing-changes" title="Stashing changes" class="md-nav__link">
+  <a href="#stashing-changes" class="md-nav__link">
     Stashing changes
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#syncing-with-remote-repository" title="Syncing with remote repository" class="md-nav__link">
+  <a href="#syncing-with-remote-repository" class="md-nav__link">
     Syncing with remote repository
   </a>
   
@@ -518,22 +539,29 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#configuring-remote" title="Configuring remote" class="md-nav__link">
+  <a href="#configuring-remote" class="md-nav__link">
     Configuring remote
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#pushing" title="Pushing" class="md-nav__link">
+  <a href="#pushing" class="md-nav__link">
     Pushing
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#merge-vs-rebase" title="Merge vs Rebase" class="md-nav__link">
+  <a href="#merge-vs-rebase" class="md-nav__link">
     Merge vs Rebase
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-reset" class="md-nav__link">
+    Git Reset
   </a>
   
 </li>
@@ -652,8 +680,14 @@ git push origin master
 <p>Both try to achieve the same result, but rebase rewrites the history by 'rebasing' one branch on top of the other, creating a lineair history. This prevents cluttering with merge commits, but can create confusing situations by creating a different history with other team members. <a href="https://www.atlassian.com/git/tutorials/merging-vs-rebasing">Link to explanation</a></p>
 <p><img alt="Merge" src="../img/merge.svg" /></p>
 <p><img alt="Rebase" src="../img/rebase.svg" /></p>
+<h3 id="git-reset">Git Reset</h3>
+<p>If you made a local commit, but did not push it to remote yet, you can use a git reset to 'remove' the commit and keep or throw away the changes.</p>
+<p>-soft -- will keep the changes of the commit and stage them
+-mixed -- will keep the changes of the commit, but will not stage them
+-hard -- will throw away the changes of the commit</p>
                 
                   
+                
                 
               
               
@@ -709,9 +743,9 @@ git push origin master
       <div class="md-footer-copyright">
         
         powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
         and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs</a>
       </div>
       
@@ -721,7 +755,7 @@ git push origin master
       
     </div>
     
-      <script src="../assets/javascripts/application.dc02f8ce.js"></script>
+      <script src="../assets/javascripts/application.c33a9706.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       

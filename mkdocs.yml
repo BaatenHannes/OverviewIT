@@ -3,6 +3,7 @@ nav:
 - Theory:
     - 'Theory': 'index.md'
     - 'WebHosting': 'webhosting.md'
+    - 'Data Structures': 'datastructures.md'
 - Technology:
     - 'MkDocs': 'mkdocs.md'
     - 'GIT': 'git.md'

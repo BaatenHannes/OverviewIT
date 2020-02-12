@@ -5,6 +5,7 @@
 To prevent too many connections from opening, only one connection is opened, and channels are logically divided to run on that one connection.
 - one physical connection
 - multiple 'logical' connections -> channels
+-
 
 
 ### Exchanges
