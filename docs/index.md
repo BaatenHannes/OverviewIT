@@ -338,6 +338,11 @@ Ontwikkelaars die CLR gebruiken schrijven hun code in een zogenaamd hogere progr
 
 ![CLR](/img/CLRDiagram.png)
 
+### .NET Standard
+
+Is geen implementatie maar een interface of contract van dll's die de library kan gebruiken.
+Zie: https://medium.com/corrado-cavalli/hownetstandardwork-a6fdcd0adff8
+
 ---
 
 ##REST 
